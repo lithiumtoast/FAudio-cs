@@ -1,0 +1,6 @@
+[submodule "ext/FAudio"]
+	path = ext/FAudio
+	url = https://github.com/FNA-XNA/FAudio
+[submodule "ext/my-msbuild"]
+	path = ext/my-msbuild
+	url = https://github.com/lithiumtoast/my-msbuild.git
