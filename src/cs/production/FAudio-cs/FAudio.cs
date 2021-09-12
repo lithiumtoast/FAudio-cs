@@ -22,902 +22,902 @@ public static unsafe partial class _FAudio
 {
     private const string LibraryName = "FAudio";
 
-    // Function @ F3DAudio.h:236:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // Function @ F3DAudio.h:236:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     [DllImport(LibraryName)]
     public static extern void F3DAudioInitialize(uint SpeakerChannelMask, float SpeedOfSound, F3DAUDIO_HANDLE Instance);
 
-    // Function @ F3DAudio.h:242:22 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // Function @ F3DAudio.h:242:22 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     [DllImport(LibraryName)]
     public static extern uint F3DAudioInitialize8(uint SpeakerChannelMask, float SpeedOfSound, F3DAUDIO_HANDLE Instance);
 
-    // Function @ F3DAudio.h:248:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // Function @ F3DAudio.h:248:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     [DllImport(LibraryName)]
     public static extern void F3DAudioCalculate(F3DAUDIO_HANDLE Instance, F3DAUDIO_LISTENER* pListener, F3DAUDIO_EMITTER* pEmitter, uint Flags, F3DAUDIO_DSP_SETTINGS* pDSPSettings);
 
-    // Function @ FAudio.h:498:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:498:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioLinkedVersion();
 
-    // Function @ FAudio.h:510:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:510:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioCreate(FAudio** ppFAudio, uint Flags, FAudioProcessor XAudio2Processor);
 
-    // Function @ FAudio.h:517:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:517:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioCOMConstructEXT(FAudio** ppFAudio, byte version);
 
-    // Function @ FAudio.h:522:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:522:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudio_AddRef(FAudio* audio);
 
-    // Function @ FAudio.h:527:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:527:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudio_Release(FAudio* audio);
 
-    // Function @ FAudio.h:535:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:535:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudio_GetDeviceCount(FAudio* audio, uint* pCount);
 
-    // Function @ FAudio.h:544:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:544:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudio_GetDeviceDetails(FAudio* audio, uint Index, FAudioDeviceDetails* pDeviceDetails);
 
-    // Function @ FAudio.h:553:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:553:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudio_Initialize(FAudio* audio, uint Flags, FAudioProcessor XAudio2Processor);
 
-    // Function @ FAudio.h:567:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:567:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudio_RegisterForCallbacks(FAudio* audio, FAudioEngineCallback* pCallback);
 
-    // Function @ FAudio.h:579:16 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:579:16 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern void FAudio_UnregisterForCallbacks(FAudio* audio, FAudioEngineCallback* pCallback);
 
-    // Function @ FAudio.h:608:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:608:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudio_CreateSourceVoice(FAudio* audio, FAudioSourceVoice** ppSourceVoice, FAudioWaveFormatEx* pSourceFormat, uint Flags, float MaxFrequencyRatio, FAudioVoiceCallback* pCallback, FAudioVoiceSends* pSendList, FAudioEffectChain* pEffectChain);
 
-    // Function @ FAudio.h:637:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:637:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudio_CreateSubmixVoice(FAudio* audio, FAudioSubmixVoice** ppSubmixVoice, uint InputChannels, uint InputSampleRate, uint Flags, uint ProcessingStage, FAudioVoiceSends* pSendList, FAudioEffectChain* pEffectChain);
 
-    // Function @ FAudio.h:660:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:660:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudio_CreateMasteringVoice(FAudio* audio, FAudioMasteringVoice** ppMasteringVoice, uint InputChannels, uint InputSampleRate, uint Flags, uint DeviceIndex, FAudioEffectChain* pEffectChain);
 
-    // Function @ FAudio.h:673:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:673:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudio_CreateMasteringVoice8(FAudio* audio, FAudioMasteringVoice** ppMasteringVoice, uint InputChannels, uint InputSampleRate, uint Flags, ushort* szDeviceId, FAudioEffectChain* pEffectChain, FAudioStreamCategory StreamCategory);
 
-    // Function @ FAudio.h:687:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:687:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudio_StartEngine(FAudio* audio);
 
-    // Function @ FAudio.h:694:16 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:694:16 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern void FAudio_StopEngine(FAudio* audio);
 
-    // Function @ FAudio.h:707:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:707:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudio_CommitOperationSet(FAudio* audio, uint OperationSet);
 
-    // Function @ FAudio.h:714:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:714:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudio_CommitChanges(FAudio* audio);
 
-    // Function @ FAudio.h:720:16 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:720:16 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern void FAudio_GetPerformanceData(FAudio* audio, FAudioPerformanceData* pPerfData);
 
-    // Function @ FAudio.h:731:16 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:731:16 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern void FAudio_SetDebugConfiguration(FAudio* audio, FAudioDebugConfiguration* pDebugConfiguration, void* pReserved);
 
-    // Function @ FAudio.h:745:16 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:745:16 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern void FAudio_GetProcessingQuantum(FAudio* audio, uint* quantumNumerator, uint* quantumDenominator);
 
-    // Function @ FAudio.h:757:16 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:757:16 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern void FAudioVoice_GetVoiceDetails(FAudioVoice* voice, FAudioVoiceDetails* pVoiceDetails);
 
-    // Function @ FAudio.h:770:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:770:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioVoice_SetOutputVoices(FAudioVoice* voice, FAudioVoiceSends* pSendList);
 
-    // Function @ FAudio.h:784:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:784:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioVoice_SetEffectChain(FAudioVoice* voice, FAudioEffectChain* pEffectChain);
 
-    // Function @ FAudio.h:796:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:796:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioVoice_EnableEffect(FAudioVoice* voice, uint EffectIndex, uint OperationSet);
 
-    // Function @ FAudio.h:809:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:809:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioVoice_DisableEffect(FAudioVoice* voice, uint EffectIndex, uint OperationSet);
 
-    // Function @ FAudio.h:822:16 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:822:16 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern void FAudioVoice_GetEffectState(FAudioVoice* voice, uint EffectIndex, int* pEnabled);
 
-    // Function @ FAudio.h:837:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:837:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioVoice_SetEffectParameters(FAudioVoice* voice, uint EffectIndex, void* pParameters, uint ParametersByteSize, uint OperationSet);
 
-    // Function @ FAudio.h:853:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:853:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioVoice_GetEffectParameters(FAudioVoice* voice, uint EffectIndex, void* pParameters, uint ParametersByteSize);
 
-    // Function @ FAudio.h:868:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:868:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioVoice_SetFilterParameters(FAudioVoice* voice, FAudioFilterParameters* pParameters, uint OperationSet);
 
-    // Function @ FAudio.h:879:16 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:879:16 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern void FAudioVoice_GetFilterParameters(FAudioVoice* voice, FAudioFilterParameters* pParameters);
 
-    // Function @ FAudio.h:893:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:893:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioVoice_SetOutputFilterParameters(FAudioVoice* voice, FAudioVoice* pDestinationVoice, FAudioFilterParameters* pParameters, uint OperationSet);
 
-    // Function @ FAudio.h:906:16 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:906:16 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern void FAudioVoice_GetOutputFilterParameters(FAudioVoice* voice, FAudioVoice* pDestinationVoice, FAudioFilterParameters* pParameters);
 
-    // Function @ FAudio.h:921:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:921:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioVoice_SetVolume(FAudioVoice* voice, float Volume, uint OperationSet);
 
-    // Function @ FAudio.h:931:16 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:931:16 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern void FAudioVoice_GetVolume(FAudioVoice* voice, float* pVolume);
 
-    // Function @ FAudio.h:944:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:944:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioVoice_SetChannelVolumes(FAudioVoice* voice, uint Channels, float* pVolumes, uint OperationSet);
 
-    // Function @ FAudio.h:956:16 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:956:16 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern void FAudioVoice_GetChannelVolumes(FAudioVoice* voice, uint Channels, float* pVolumes);
 
-    // Function @ FAudio.h:979:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:979:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioVoice_SetOutputMatrix(FAudioVoice* voice, FAudioVoice* pDestinationVoice, uint SourceChannels, uint DestinationChannels, float* pLevelMatrix, uint OperationSet);
 
-    // Function @ FAudio.h:995:16 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:995:16 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern void FAudioVoice_GetOutputMatrix(FAudioVoice* voice, FAudioVoice* pDestinationVoice, uint SourceChannels, uint DestinationChannels, float* pLevelMatrix);
 
-    // Function @ FAudio.h:1004:16 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:1004:16 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern void FAudioVoice_DestroyVoice(FAudioVoice* voice);
 
-    // Function @ FAudio.h:1015:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:1015:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioSourceVoice_Start(FAudioSourceVoice* voice, uint Flags, uint OperationSet);
 
-    // Function @ FAudio.h:1030:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:1030:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioSourceVoice_Stop(FAudioSourceVoice* voice, uint Flags, uint OperationSet);
 
-    // Function @ FAudio.h:1043:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:1043:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioSourceVoice_SubmitSourceBuffer(FAudioSourceVoice* voice, FAudioBuffer* pBuffer, FAudioBufferWMA* pBufferWMA);
 
-    // Function @ FAudio.h:1055:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:1055:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioSourceVoice_FlushSourceBuffers(FAudioSourceVoice* voice);
 
-    // Function @ FAudio.h:1063:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:1063:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioSourceVoice_Discontinuity(FAudioSourceVoice* voice);
 
-    // Function @ FAudio.h:1073:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:1073:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioSourceVoice_ExitLoop(FAudioSourceVoice* voice, uint OperationSet);
 
-    // Function @ FAudio.h:1083:16 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:1083:16 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern void FAudioSourceVoice_GetState(FAudioSourceVoice* voice, FAudioVoiceState* pVoiceState, uint Flags);
 
-    // Function @ FAudio.h:1096:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:1096:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioSourceVoice_SetFrequencyRatio(FAudioSourceVoice* voice, float Ratio, uint OperationSet);
 
-    // Function @ FAudio.h:1106:16 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:1106:16 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern void FAudioSourceVoice_GetFrequencyRatio(FAudioSourceVoice* voice, float* pRatio);
 
-    // Function @ FAudio.h:1122:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:1122:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioSourceVoice_SetSourceSampleRate(FAudioSourceVoice* voice, uint NewSourceSampleRate);
 
-    // Function @ FAudio.h:1137:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:1137:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioMasteringVoice_GetChannelMask(FAudioMasteringVoice* voice, uint* pChannelMask);
 
-    // Function @ FAudio.h:1251:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:1251:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioCreateWithCustomAllocatorEXT(FAudio** ppFAudio, uint Flags, FAudioProcessor XAudio2Processor, FAudioMallocFunc customMalloc, FAudioFreeFunc customFree, FAudioReallocFunc customRealloc);
 
-    // Function @ FAudio.h:1259:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:1259:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioCOMConstructWithCustomAllocatorEXT(FAudio** ppFAudio, byte version, FAudioMallocFunc customMalloc, FAudioFreeFunc customFree, FAudioReallocFunc customRealloc);
 
-    // Function @ FAudio.h:1273:16 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:1273:16 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern void FAudio_SetEngineProcedureEXT(FAudio* audio, FAudioEngineProcedureEXT clientEngineProc, void* user);
 
-    // Function @ FAudio.h:1311:27 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:1311:27 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern FAudioIOStream* FAudio_fopen(CString8U path);
 
-    // Function @ FAudio.h:1312:27 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:1312:27 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern FAudioIOStream* FAudio_memopen(void* mem, int len);
 
-    // Function @ FAudio.h:1313:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:1313:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern byte* FAudio_memptr(FAudioIOStream* io, ulong offset);
 
-    // Function @ FAudio.h:1314:16 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Function @ FAudio.h:1314:16 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [DllImport(LibraryName)]
     public static extern void FAudio_close(FAudioIOStream* io);
 
-    // Function @ FACT.h:462:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:462:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTCreateEngine(uint dwCreationFlags, FACTAudioEngine** ppEngine);
 
-    // Function @ FACT.h:468:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:468:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTCreateEngineWithCustomAllocatorEXT(uint dwCreationFlags, FACTAudioEngine** ppEngine, FAudioMallocFunc customMalloc, FAudioFreeFunc customFree, FAudioReallocFunc customRealloc);
 
-    // Function @ FACT.h:476:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:476:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_AddRef(FACTAudioEngine* pEngine);
 
-    // Function @ FACT.h:478:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:478:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_Release(FACTAudioEngine* pEngine);
 
-    // Function @ FACT.h:482:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:482:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_GetRendererCount(FACTAudioEngine* pEngine, ushort* pnRendererCount);
 
-    // Function @ FACT.h:487:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:487:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_GetRendererDetails(FACTAudioEngine* pEngine, ushort nRendererIndex, FACTRendererDetails* pRendererDetails);
 
-    // Function @ FACT.h:493:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:493:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_GetFinalMixFormat(FACTAudioEngine* pEngine, FAudioWaveFormatExtensible* pFinalMixFormat);
 
-    // Function @ FACT.h:498:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:498:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_Initialize(FACTAudioEngine* pEngine, FACTRuntimeParameters* pParams);
 
-    // Function @ FACT.h:503:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:503:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_ShutDown(FACTAudioEngine* pEngine);
 
-    // Function @ FACT.h:505:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:505:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_DoWork(FACTAudioEngine* pEngine);
 
-    // Function @ FACT.h:507:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:507:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_CreateSoundBank(FACTAudioEngine* pEngine, void* pvBuffer, uint dwSize, uint dwFlags, uint dwAllocAttributes, FACTSoundBank** ppSoundBank);
 
-    // Function @ FACT.h:516:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:516:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_CreateInMemoryWaveBank(FACTAudioEngine* pEngine, void* pvBuffer, uint dwSize, uint dwFlags, uint dwAllocAttributes, FACTWaveBank** ppWaveBank);
 
-    // Function @ FACT.h:525:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:525:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_CreateStreamingWaveBank(FACTAudioEngine* pEngine, FACTStreamingParameters* pParms, FACTWaveBank** ppWaveBank);
 
-    // Function @ FACT.h:531:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:531:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_PrepareWave(FACTAudioEngine* pEngine, uint dwFlags, CString8U szWavePath, uint wStreamingPacketSize, uint dwAlignment, uint dwPlayOffset, byte nLoopCount, FACTWave** ppWave);
 
-    // Function @ FACT.h:542:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:542:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_PrepareInMemoryWave(FACTAudioEngine* pEngine, uint dwFlags, FACTWaveBankEntry entry, uint* pdwSeekTable, byte* pbWaveData, uint dwPlayOffset, byte nLoopCount, FACTWave** ppWave);
 
-    // Function @ FACT.h:553:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:553:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_PrepareStreamingWave(FACTAudioEngine* pEngine, uint dwFlags, FACTWaveBankEntry entry, FACTStreamingParameters streamingParams, uint dwAlignment, uint* pdwSeekTable, byte* pbWaveData, uint dwPlayOffset, byte nLoopCount, FACTWave** ppWave);
 
-    // Function @ FACT.h:566:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:566:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_RegisterNotification(FACTAudioEngine* pEngine, FACTNotificationDescription* pNotificationDescription);
 
-    // Function @ FACT.h:571:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:571:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_UnRegisterNotification(FACTAudioEngine* pEngine, FACTNotificationDescription* pNotificationDescription);
 
-    // Function @ FACT.h:576:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:576:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern ushort FACTAudioEngine_GetCategory(FACTAudioEngine* pEngine, CString8U szFriendlyName);
 
-    // Function @ FACT.h:581:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:581:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_Stop(FACTAudioEngine* pEngine, ushort nCategory, uint dwFlags);
 
-    // Function @ FACT.h:587:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:587:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_SetVolume(FACTAudioEngine* pEngine, ushort nCategory, float volume);
 
-    // Function @ FACT.h:593:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:593:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_Pause(FACTAudioEngine* pEngine, ushort nCategory, int fPause);
 
-    // Function @ FACT.h:599:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:599:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern ushort FACTAudioEngine_GetGlobalVariableIndex(FACTAudioEngine* pEngine, CString8U szFriendlyName);
 
-    // Function @ FACT.h:604:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:604:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_SetGlobalVariable(FACTAudioEngine* pEngine, ushort nIndex, float nValue);
 
-    // Function @ FACT.h:610:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:610:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTAudioEngine_GetGlobalVariable(FACTAudioEngine* pEngine, ushort nIndex, float* pnValue);
 
-    // Function @ FACT.h:618:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:618:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern ushort FACTSoundBank_GetCueIndex(FACTSoundBank* pSoundBank, CString8U szFriendlyName);
 
-    // Function @ FACT.h:623:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:623:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTSoundBank_GetNumCues(FACTSoundBank* pSoundBank, ushort* pnNumCues);
 
-    // Function @ FACT.h:628:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:628:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTSoundBank_GetCueProperties(FACTSoundBank* pSoundBank, ushort nCueIndex, FACTCueProperties* pProperties);
 
-    // Function @ FACT.h:634:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:634:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTSoundBank_Prepare(FACTSoundBank* pSoundBank, ushort nCueIndex, uint dwFlags, int timeOffset, FACTCue** ppCue);
 
-    // Function @ FACT.h:642:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:642:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTSoundBank_Play(FACTSoundBank* pSoundBank, ushort nCueIndex, uint dwFlags, int timeOffset, FACTCue** ppCue);
 
-    // Function @ FACT.h:655:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:655:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTSoundBank_Play3D(FACTSoundBank* pSoundBank, ushort nCueIndex, uint dwFlags, int timeOffset, F3DAUDIO_DSP_SETTINGS* pDSPSettings, FACTCue** ppCue);
 
-    // Function @ FACT.h:664:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:664:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTSoundBank_Stop(FACTSoundBank* pSoundBank, ushort nCueIndex, uint dwFlags);
 
-    // Function @ FACT.h:670:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:670:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTSoundBank_Destroy(FACTSoundBank* pSoundBank);
 
-    // Function @ FACT.h:672:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:672:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTSoundBank_GetState(FACTSoundBank* pSoundBank, uint* pdwState);
 
-    // Function @ FACT.h:679:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:679:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTWaveBank_Destroy(FACTWaveBank* pWaveBank);
 
-    // Function @ FACT.h:681:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:681:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTWaveBank_GetState(FACTWaveBank* pWaveBank, uint* pdwState);
 
-    // Function @ FACT.h:686:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:686:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTWaveBank_GetNumWaves(FACTWaveBank* pWaveBank, ushort* pnNumWaves);
 
-    // Function @ FACT.h:691:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:691:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern ushort FACTWaveBank_GetWaveIndex(FACTWaveBank* pWaveBank, CString8U szFriendlyName);
 
-    // Function @ FACT.h:696:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:696:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTWaveBank_GetWaveProperties(FACTWaveBank* pWaveBank, ushort nWaveIndex, FACTWaveProperties* pWaveProperties);
 
-    // Function @ FACT.h:702:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:702:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTWaveBank_Prepare(FACTWaveBank* pWaveBank, ushort nWaveIndex, uint dwFlags, uint dwPlayOffset, byte nLoopCount, FACTWave** ppWave);
 
-    // Function @ FACT.h:711:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:711:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTWaveBank_Play(FACTWaveBank* pWaveBank, ushort nWaveIndex, uint dwFlags, uint dwPlayOffset, byte nLoopCount, FACTWave** ppWave);
 
-    // Function @ FACT.h:720:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:720:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTWaveBank_Stop(FACTWaveBank* pWaveBank, ushort nWaveIndex, uint dwFlags);
 
-    // Function @ FACT.h:728:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:728:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTWave_Destroy(FACTWave* pWave);
 
-    // Function @ FACT.h:730:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:730:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTWave_Play(FACTWave* pWave);
 
-    // Function @ FACT.h:732:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:732:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTWave_Stop(FACTWave* pWave, uint dwFlags);
 
-    // Function @ FACT.h:734:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:734:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTWave_Pause(FACTWave* pWave, int fPause);
 
-    // Function @ FACT.h:736:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:736:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTWave_GetState(FACTWave* pWave, uint* pdwState);
 
-    // Function @ FACT.h:738:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:738:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTWave_SetPitch(FACTWave* pWave, short pitch);
 
-    // Function @ FACT.h:740:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:740:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTWave_SetVolume(FACTWave* pWave, float volume);
 
-    // Function @ FACT.h:742:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:742:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTWave_SetMatrixCoefficients(FACTWave* pWave, uint uSrcChannelCount, uint uDstChannelCount, float* pMatrixCoefficients);
 
-    // Function @ FACT.h:749:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:749:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTWave_GetProperties(FACTWave* pWave, FACTWaveInstanceProperties* pProperties);
 
-    // Function @ FACT.h:756:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:756:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTCue_Destroy(FACTCue* pCue);
 
-    // Function @ FACT.h:758:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:758:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTCue_Play(FACTCue* pCue);
 
-    // Function @ FACT.h:760:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:760:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTCue_Stop(FACTCue* pCue, uint dwFlags);
 
-    // Function @ FACT.h:762:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:762:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTCue_GetState(FACTCue* pCue, uint* pdwState);
 
-    // Function @ FACT.h:764:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:764:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTCue_SetMatrixCoefficients(FACTCue* pCue, uint uSrcChannelCount, uint uDstChannelCount, float* pMatrixCoefficients);
 
-    // Function @ FACT.h:771:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:771:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern ushort FACTCue_GetVariableIndex(FACTCue* pCue, CString8U szFriendlyName);
 
-    // Function @ FACT.h:776:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:776:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTCue_SetVariable(FACTCue* pCue, ushort nIndex, float nValue);
 
-    // Function @ FACT.h:782:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:782:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTCue_GetVariable(FACTCue* pCue, ushort nIndex, float* nValue);
 
-    // Function @ FACT.h:788:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:788:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTCue_Pause(FACTCue* pCue, int fPause);
 
-    // Function @ FACT.h:790:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:790:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTCue_GetProperties(FACTCue* pCue, FACTCueInstanceProperties** ppProperties);
 
-    // Function @ FACT.h:795:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:795:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTCue_SetOutputVoices(FACTCue* pCue, FAudioVoiceSends* pSendList);
 
-    // Function @ FACT.h:800:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Function @ FACT.h:800:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [DllImport(LibraryName)]
     public static extern uint FACTCue_SetOutputVoiceMatrix(FACTCue* pCue, FAudioVoice* pDestinationVoice, uint SourceChannels, uint DestinationChannels, float* pLevelMatrix);
 
-    // Function @ FACT3D.h:104:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT3D.h)
+    // Function @ FACT3D.h:104:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT3D.h)
     [DllImport(LibraryName)]
     public static extern uint FACT3DInitialize(FACTAudioEngine* pEngine, F3DAUDIO_HANDLE F3DInstance);
 
-    // Function @ FACT3D.h:109:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT3D.h)
+    // Function @ FACT3D.h:109:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT3D.h)
     [DllImport(LibraryName)]
     public static extern uint FACT3DCalculate(F3DAUDIO_HANDLE F3DInstance, F3DAUDIO_LISTENER* pListener, F3DAUDIO_EMITTER* pEmitter, F3DAUDIO_DSP_SETTINGS* pDSPSettings);
 
-    // Function @ FACT3D.h:116:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT3D.h)
+    // Function @ FACT3D.h:116:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT3D.h)
     [DllImport(LibraryName)]
     public static extern uint FACT3DApply(F3DAUDIO_DSP_SETTINGS* pDSPSettings, FACTCue* pCue);
 
-    // Function @ FAPOBase.h:140:14 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:140:14 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern void CreateFAPOBase(FAPOBase* fapo, FAPORegistrationProperties* pRegistrationProperties, byte* pParameterBlocks, uint uParameterBlockByteSize, byte fProducer);
 
-    // Function @ FAPOBase.h:149:14 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:149:14 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern void CreateFAPOBaseWithCustomAllocatorEXT(FAPOBase* fapo, FAPORegistrationProperties* pRegistrationProperties, byte* pParameterBlocks, uint uParameterBlockByteSize, byte fProducer, FAudioMallocFunc customMalloc, FAudioFreeFunc customFree, FAudioReallocFunc customRealloc);
 
-    // Function @ FAPOBase.h:160:17 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:160:17 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern int FAPOBase_AddRef(FAPOBase* fapo);
 
-    // Function @ FAPOBase.h:162:17 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:162:17 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern int FAPOBase_Release(FAPOBase* fapo);
 
-    // Function @ FAPOBase.h:164:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:164:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern uint FAPOBase_GetRegistrationProperties(FAPOBase* fapo, FAPORegistrationProperties** ppRegistrationProperties);
 
-    // Function @ FAPOBase.h:169:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:169:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern uint FAPOBase_IsInputFormatSupported(FAPOBase* fapo, FAudioWaveFormatEx* pOutputFormat, FAudioWaveFormatEx* pRequestedInputFormat, FAudioWaveFormatEx** ppSupportedInputFormat);
 
-    // Function @ FAPOBase.h:176:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:176:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern uint FAPOBase_IsOutputFormatSupported(FAPOBase* fapo, FAudioWaveFormatEx* pInputFormat, FAudioWaveFormatEx* pRequestedOutputFormat, FAudioWaveFormatEx** ppSupportedOutputFormat);
 
-    // Function @ FAPOBase.h:183:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:183:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern uint FAPOBase_Initialize(FAPOBase* fapo, void* pData, uint DataByteSize);
 
-    // Function @ FAPOBase.h:189:14 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:189:14 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern void FAPOBase_Reset(FAPOBase* fapo);
 
-    // Function @ FAPOBase.h:191:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:191:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern uint FAPOBase_LockForProcess(FAPOBase* fapo, uint InputLockedParameterCount, FAPOLockForProcessBufferParameters* pInputLockedParameters, uint OutputLockedParameterCount, FAPOLockForProcessBufferParameters* pOutputLockedParameters);
 
-    // Function @ FAPOBase.h:199:14 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:199:14 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern void FAPOBase_UnlockForProcess(FAPOBase* fapo);
 
-    // Function @ FAPOBase.h:201:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:201:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern uint FAPOBase_CalcInputFrames(FAPOBase* fapo, uint OutputFrameCount);
 
-    // Function @ FAPOBase.h:206:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:206:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern uint FAPOBase_CalcOutputFrames(FAPOBase* fapo, uint InputFrameCount);
 
-    // Function @ FAPOBase.h:211:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:211:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern uint FAPOBase_ValidateFormatDefault(FAPOBase* fapo, FAudioWaveFormatEx* pFormat, byte fOverwrite);
 
-    // Function @ FAPOBase.h:217:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:217:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern uint FAPOBase_ValidateFormatPair(FAPOBase* fapo, FAudioWaveFormatEx* pSupportedFormat, FAudioWaveFormatEx* pRequestedFormat, byte fOverwrite);
 
-    // Function @ FAPOBase.h:224:14 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:224:14 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern void FAPOBase_ProcessThru(FAPOBase* fapo, void* pInputBuffer, float* pOutputBuffer, uint FrameCount, ushort InputChannelCount, ushort OutputChannelCount, byte MixWithOutput);
 
-    // Function @ FAPOBase.h:234:14 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:234:14 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern void FAPOBase_SetParameters(FAPOBase* fapo, void* pParameters, uint ParameterByteSize);
 
-    // Function @ FAPOBase.h:240:14 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:240:14 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern void FAPOBase_GetParameters(FAPOBase* fapo, void* pParameters, uint ParameterByteSize);
 
-    // Function @ FAPOBase.h:246:14 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:246:14 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern void FAPOBase_OnSetParameters(FAPOBase* fapo, void* parameters, uint parametersSize);
 
-    // Function @ FAPOBase.h:252:17 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:252:17 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern byte FAPOBase_ParametersChanged(FAPOBase* fapo);
 
-    // Function @ FAPOBase.h:254:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:254:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern byte* FAPOBase_BeginProcess(FAPOBase* fapo);
 
-    // Function @ FAPOBase.h:256:14 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Function @ FAPOBase.h:256:14 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [DllImport(LibraryName)]
     public static extern void FAPOBase_EndProcess(FAPOBase* fapo);
 
-    // Function @ FAPOFX.h:154:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // Function @ FAPOFX.h:154:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     [DllImport(LibraryName)]
     public static extern uint FAPOFX_CreateFX(FAudioGUID* clsid, FAPO** pEffect, void* pInitData, uint InitDataByteSize);
 
-    // Function @ FAPOFX.h:162:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // Function @ FAPOFX.h:162:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     [DllImport(LibraryName)]
     public static extern uint FAPOFX_CreateFXWithCustomAllocatorEXT(FAudioGUID* clsid, FAPO** pEffect, void* pInitData, uint InitDataByteSize, FAudioMallocFunc customMalloc, FAudioFreeFunc customFree, FAudioReallocFunc customRealloc);
 
-    // Function @ FAudioFX.h:265:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // Function @ FAudioFX.h:265:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioCreateVolumeMeter(FAPO** ppApo, uint Flags);
 
-    // Function @ FAudioFX.h:266:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // Function @ FAudioFX.h:266:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioCreateReverb(FAPO** ppApo, uint Flags);
 
-    // Function @ FAudioFX.h:267:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // Function @ FAudioFX.h:267:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioCreateReverb9(FAPO** ppApo, uint Flags);
 
-    // Function @ FAudioFX.h:270:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // Function @ FAudioFX.h:270:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioCreateVolumeMeterWithCustomAllocatorEXT(FAPO** ppApo, uint Flags, FAudioMallocFunc customMalloc, FAudioFreeFunc customFree, FAudioReallocFunc customRealloc);
 
-    // Function @ FAudioFX.h:277:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // Function @ FAudioFX.h:277:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioCreateReverbWithCustomAllocatorEXT(FAPO** ppApo, uint Flags, FAudioMallocFunc customMalloc, FAudioFreeFunc customFree, FAudioReallocFunc customRealloc);
 
-    // Function @ FAudioFX.h:284:20 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // Function @ FAudioFX.h:284:20 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     [DllImport(LibraryName)]
     public static extern uint FAudioCreateReverb9WithCustomAllocatorEXT(FAPO** ppApo, uint Flags, FAudioMallocFunc customMalloc, FAudioFreeFunc customFree, FAudioReallocFunc customRealloc);
 
-    // Function @ FAudioFX.h:292:16 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // Function @ FAudioFX.h:292:16 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     [DllImport(LibraryName)]
     public static extern void ReverbConvertI3DL2ToNative(FAudioFXReverbI3DL2Parameters* pI3DL2, FAudioFXReverbParameters* pNative);
 
-    // Function @ FAudioFX.h:296:16 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // Function @ FAudioFX.h:296:16 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     [DllImport(LibraryName)]
     public static extern void ReverbConvertI3DL2ToNative9(FAudioFXReverbI3DL2Parameters* pI3DL2, FAudioFXReverbParameters9* pNative, int sevenDotOneReverb);
 
-    // FunctionPointer @ FAudio.h:1247:29 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // FunctionPointer @ FAudio.h:1247:29 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FAudioMallocFunc
     {
         public delegate* unmanaged<ulong, void*> Pointer;
     }
 
-    // FunctionPointer @ FAudio.h:1248:28 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // FunctionPointer @ FAudio.h:1248:28 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FAudioFreeFunc
     {
         public delegate* unmanaged<void*, void> Pointer;
     }
 
-    // FunctionPointer @ FAudio.h:1249:29 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // FunctionPointer @ FAudio.h:1249:29 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FAudioReallocFunc
     {
         public delegate* unmanaged<void*, ulong, void*> Pointer;
     }
 
-    // FunctionPointer @ FAudio.h:1271:27 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // FunctionPointer @ FAudio.h:1271:27 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FAudioEngineProcedureEXT
     {
         public delegate* unmanaged<FAudioEngineCallEXT, FAudio*, float*, void*, void> Pointer;
     }
 
-    // FunctionPointer @ FAudio.h:1148:28 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // FunctionPointer @ FAudio.h:1148:28 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct OnCriticalErrorFunc
     {
         public delegate* unmanaged<FAudioEngineCallback*, uint, void> Pointer;
     }
 
-    // FunctionPointer @ FAudio.h:1154:28 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // FunctionPointer @ FAudio.h:1154:28 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct OnProcessingPassEndFunc
     {
         public delegate* unmanaged<FAudioEngineCallback*, void> Pointer;
     }
 
-    // FunctionPointer @ FAudio.h:1159:28 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // FunctionPointer @ FAudio.h:1159:28 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct OnProcessingPassStartFunc
     {
         public delegate* unmanaged<FAudioEngineCallback*, void> Pointer;
     }
 
-    // FunctionPointer @ FAudio.h:1176:28 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // FunctionPointer @ FAudio.h:1176:28 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct OnBufferEndFunc
     {
         public delegate* unmanaged<FAudioVoiceCallback*, void*, void> Pointer;
     }
 
-    // FunctionPointer @ FAudio.h:1185:28 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // FunctionPointer @ FAudio.h:1185:28 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct OnBufferStartFunc
     {
         public delegate* unmanaged<FAudioVoiceCallback*, void*, void> Pointer;
     }
 
-    // FunctionPointer @ FAudio.h:1194:28 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // FunctionPointer @ FAudio.h:1194:28 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct OnLoopEndFunc
     {
         public delegate* unmanaged<FAudioVoiceCallback*, void*, void> Pointer;
     }
 
-    // FunctionPointer @ FAudio.h:1200:28 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // FunctionPointer @ FAudio.h:1200:28 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct OnStreamEndFunc
     {
         public delegate* unmanaged<FAudioVoiceCallback*, void> Pointer;
     }
 
-    // FunctionPointer @ FAudio.h:1209:28 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // FunctionPointer @ FAudio.h:1209:28 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct OnVoiceErrorFunc
     {
         public delegate* unmanaged<FAudioVoiceCallback*, void*, uint, void> Pointer;
     }
 
-    // FunctionPointer @ FAudio.h:1216:28 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // FunctionPointer @ FAudio.h:1216:28 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct OnVoiceProcessingPassEndFunc
     {
         public delegate* unmanaged<FAudioVoiceCallback*, void> Pointer;
     }
 
-    // FunctionPointer @ FAudio.h:1227:28 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // FunctionPointer @ FAudio.h:1227:28 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct OnVoiceProcessingPassStartFunc
     {
         public delegate* unmanaged<FAudioVoiceCallback*, uint, void> Pointer;
     }
 
-    // FunctionPointer @ FAudio.h:1270:27 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // FunctionPointer @ FAudio.h:1270:27 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FAudioEngineCallEXT
     {
         public delegate* unmanaged<FAudio*, float*, void> Pointer;
     }
 
-    // FunctionPointer @ FAudio.h:1287:30 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // FunctionPointer @ FAudio.h:1287:30 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FAudio_readfunc
     {
         public delegate* unmanaged<void*, void*, ulong, ulong, ulong> Pointer;
     }
 
-    // FunctionPointer @ FAudio.h:1293:31 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // FunctionPointer @ FAudio.h:1293:31 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FAudio_seekfunc
     {
         public delegate* unmanaged<void*, long, int, long> Pointer;
     }
 
-    // FunctionPointer @ FAudio.h:1298:27 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // FunctionPointer @ FAudio.h:1298:27 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FAudio_closefunc
     {
         public delegate* unmanaged<void*, int> Pointer;
     }
 
-    // FunctionPointer @ FACT.h:100:26 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // FunctionPointer @ FACT.h:100:26 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FACTNotificationCallback
     {
         public delegate* unmanaged<FACTNotification*, void> Pointer;
     }
 
-    // FunctionPointer @ FAPOBase.h:110:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // FunctionPointer @ FAPOBase.h:110:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FnPtr_FAUDIO_VoidPtr_Void
     {
         public delegate* unmanaged<void*, void> Pointer;
     }
 
-    // FunctionPointer @ FAPOBase.h:99:26 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // FunctionPointer @ FAPOBase.h:99:26 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct OnSetParametersFunc
     {
         public delegate* unmanaged<FAPOBase*, void*, uint, void> Pointer;
     }
 
-    // FunctionPointer @ FAPO.h:116:29 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // FunctionPointer @ FAPO.h:116:29 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct AddRefFunc
     {
         public delegate* unmanaged<void*, int> Pointer;
     }
 
-    // FunctionPointer @ FAPO.h:119:29 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // FunctionPointer @ FAPO.h:119:29 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ReleaseFunc
     {
         public delegate* unmanaged<void*, int> Pointer;
     }
 
-    // FunctionPointer @ FAPO.h:122:30 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // FunctionPointer @ FAPO.h:122:30 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct GetRegistrationPropertiesFunc
     {
         public delegate* unmanaged<void*, FAPORegistrationProperties**, uint> Pointer;
     }
 
-    // FunctionPointer @ FAPO.h:126:30 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // FunctionPointer @ FAPO.h:126:30 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct IsInputFormatSupportedFunc
     {
         public delegate* unmanaged<void*, FAudioWaveFormatEx*, FAudioWaveFormatEx*, FAudioWaveFormatEx**, uint> Pointer;
     }
 
-    // FunctionPointer @ FAPO.h:132:30 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // FunctionPointer @ FAPO.h:132:30 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct IsOutputFormatSupportedFunc
     {
         public delegate* unmanaged<void*, FAudioWaveFormatEx*, FAudioWaveFormatEx*, FAudioWaveFormatEx**, uint> Pointer;
     }
 
-    // FunctionPointer @ FAPO.h:138:30 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // FunctionPointer @ FAPO.h:138:30 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct InitializeFunc
     {
         public delegate* unmanaged<void*, void*, uint, uint> Pointer;
     }
 
-    // FunctionPointer @ FAPO.h:143:26 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // FunctionPointer @ FAPO.h:143:26 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ResetFunc
     {
         public delegate* unmanaged<void*, void> Pointer;
     }
 
-    // FunctionPointer @ FAPO.h:146:30 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // FunctionPointer @ FAPO.h:146:30 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct LockForProcessFunc
     {
         public delegate* unmanaged<void*, uint, FAPOLockForProcessBufferParameters*, uint, FAPOLockForProcessBufferParameters*, uint> Pointer;
     }
 
-    // FunctionPointer @ FAPO.h:153:26 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // FunctionPointer @ FAPO.h:153:26 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct UnlockForProcessFunc
     {
         public delegate* unmanaged<void*, void> Pointer;
     }
 
-    // FunctionPointer @ FAPO.h:156:26 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // FunctionPointer @ FAPO.h:156:26 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct ProcessFunc
     {
         public delegate* unmanaged<void*, uint, FAPOProcessBufferParameters*, uint, FAPOProcessBufferParameters*, int, void> Pointer;
     }
 
-    // FunctionPointer @ FAPO.h:164:30 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // FunctionPointer @ FAPO.h:164:30 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct CalcInputFramesFunc
     {
         public delegate* unmanaged<void*, uint, uint> Pointer;
     }
 
-    // FunctionPointer @ FAPO.h:168:30 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // FunctionPointer @ FAPO.h:168:30 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct CalcOutputFramesFunc
     {
         public delegate* unmanaged<void*, uint, uint> Pointer;
     }
 
-    // FunctionPointer @ FAPO.h:172:26 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // FunctionPointer @ FAPO.h:172:26 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct SetParametersFunc
     {
         public delegate* unmanaged<void*, void*, uint, void> Pointer;
     }
 
-    // FunctionPointer @ FAPO.h:177:26 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // FunctionPointer @ FAPO.h:177:26 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct GetParametersFunc
     {
         public delegate* unmanaged<void*, void*, uint, void> Pointer;
     }
 
-    // FunctionPointer @ FACT.h:79:29 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // FunctionPointer @ FACT.h:79:29 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FACTReadFileCallback
     {
         public delegate* unmanaged<void*, void*, uint, uint*, FACTOverlapped*, int> Pointer;
     }
 
-    // FunctionPointer @ FACT.h:87:29 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // FunctionPointer @ FACT.h:87:29 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FACTGetOverlappedResultCallback
     {
         public delegate* unmanaged<void*, FACTOverlapped*, uint*, int, int> Pointer;
     }
 
-    // Struct @ F3DAudio.h:188:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // Struct @ F3DAudio.h:188:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 56, Pack = 1)]
     public struct F3DAUDIO_LISTENER
     {
@@ -937,7 +937,7 @@ public static unsafe partial class _FAudio
         public F3DAUDIO_CONE* pCone;
     }
 
-    // Struct @ F3DAudio.h:209:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // Struct @ F3DAudio.h:209:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 128, Pack = 1)]
     public struct F3DAUDIO_EMITTER
     {
@@ -993,7 +993,7 @@ public static unsafe partial class _FAudio
         public float DopplerScaler;
     }
 
-    // Struct @ F3DAudio.h:213:38 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // Struct @ F3DAudio.h:213:38 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 56, Pack = 1)]
     public struct F3DAUDIO_DSP_SETTINGS
     {
@@ -1034,7 +1034,7 @@ public static unsafe partial class _FAudio
         public float ListenerVelocityComponent;
     }
 
-    // Struct @ FAudio.h:121:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Struct @ FAudio.h:121:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 16, Pack = 1)]
     public struct FAudioGUID
     {
@@ -1064,7 +1064,7 @@ public static unsafe partial class _FAudio
         }
     }
 
-    // Struct @ FAudio.h:195:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Struct @ FAudio.h:195:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 1068, Pack = 1)]
     public struct FAudioDeviceDetails
     {
@@ -1107,7 +1107,7 @@ public static unsafe partial class _FAudio
         public FAudioWaveFormatExtensible OutputFormat;
     }
 
-    // Struct @ FAudio.h:67:37 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Struct @ FAudio.h:67:37 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 24, Pack = 8)]
     public struct FAudioEngineCallback
     {
@@ -1121,7 +1121,7 @@ public static unsafe partial class _FAudio
         public OnProcessingPassStartFunc OnProcessingPassStart;
     }
 
-    // Struct @ FAudio.h:135:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Struct @ FAudio.h:135:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 18, Pack = 1)]
     public struct FAudioWaveFormatEx
     {
@@ -1147,7 +1147,7 @@ public static unsafe partial class _FAudio
         public ushort cbSize;
     }
 
-    // Struct @ FAudio.h:68:36 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Struct @ FAudio.h:68:36 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 56, Pack = 8)]
     public struct FAudioVoiceCallback
     {
@@ -1173,7 +1173,7 @@ public static unsafe partial class _FAudio
         public OnVoiceProcessingPassStartFunc OnVoiceProcessingPassStart;
     }
 
-    // Struct @ FAudio.h:215:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Struct @ FAudio.h:215:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 12, Pack = 1)]
     public struct FAudioVoiceSends
     {
@@ -1184,7 +1184,7 @@ public static unsafe partial class _FAudio
         public FAudioSendDescriptor* pSends;
     }
 
-    // Struct @ FAudio.h:233:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Struct @ FAudio.h:233:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 12, Pack = 1)]
     public struct FAudioEffectChain
     {
@@ -1195,7 +1195,7 @@ public static unsafe partial class _FAudio
         public FAudioEffectDescriptor* pEffectDescriptors;
     }
 
-    // Struct @ FAudio.h:299:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Struct @ FAudio.h:299:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 64, Pack = 1)]
     public struct FAudioPerformanceData
     {
@@ -1242,7 +1242,7 @@ public static unsafe partial class _FAudio
         public uint ActiveXmaStreams;
     }
 
-    // Struct @ FAudio.h:311:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Struct @ FAudio.h:311:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 24, Pack = 1)]
     public struct FAudioDebugConfiguration
     {
@@ -1265,7 +1265,7 @@ public static unsafe partial class _FAudio
         public int LogTiming;
     }
 
-    // Struct @ FAudio.h:203:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Struct @ FAudio.h:203:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 16, Pack = 1)]
     public struct FAudioVoiceDetails
     {
@@ -1282,7 +1282,7 @@ public static unsafe partial class _FAudio
         public uint InputSampleRate;
     }
 
-    // Struct @ FAudio.h:240:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Struct @ FAudio.h:240:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 12, Pack = 1)]
     public struct FAudioFilterParameters
     {
@@ -1296,7 +1296,7 @@ public static unsafe partial class _FAudio
         public float OneOverQ;
     }
 
-    // Struct @ FAudio.h:268:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Struct @ FAudio.h:268:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 44, Pack = 1)]
     public struct FAudioBuffer
     {
@@ -1328,7 +1328,7 @@ public static unsafe partial class _FAudio
         public void* pContext;
     }
 
-    // Struct @ FAudio.h:274:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Struct @ FAudio.h:274:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 12, Pack = 1)]
     public struct FAudioBufferWMA
     {
@@ -1339,7 +1339,7 @@ public static unsafe partial class _FAudio
         public uint PacketCount;
     }
 
-    // Struct @ FAudio.h:281:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Struct @ FAudio.h:281:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 20, Pack = 1)]
     public struct FAudioVoiceState
     {
@@ -1353,7 +1353,7 @@ public static unsafe partial class _FAudio
         public ulong SamplesPlayed;
     }
 
-    // Struct @ FAudio.h:1309:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Struct @ FAudio.h:1309:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 40, Pack = 8)]
     public struct FAudioIOStream
     {
@@ -1373,7 +1373,7 @@ public static unsafe partial class _FAudio
         public void* @lock;
     }
 
-    // Struct @ FACT.h:61:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Struct @ FACT.h:61:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Explicit, Size = 1024, Pack = 4)]
     public struct FACTRendererDetails
     {
@@ -1413,7 +1413,7 @@ public static unsafe partial class _FAudio
         public int defaultDevice;
     }
 
-    // Struct @ FAudio.h:151:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Struct @ FAudio.h:151:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 40, Pack = 1)]
     public struct FAudioWaveFormatExtensible
     {
@@ -1429,7 +1429,7 @@ public static unsafe partial class _FAudio
         [FieldOffset(24)] // size = 16, padding = 0
         public FAudioGUID SubFormat;
 
-        // Union @ FAudio.h:143:2 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+        // Union @ FAudio.h:143:2 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
         [StructLayout(LayoutKind.Explicit, Size = 2, Pack = 1)]
         public struct FAudioWaveFormatExtensible_Samples
         {
@@ -1444,7 +1444,7 @@ public static unsafe partial class _FAudio
         }
     }
 
-    // Struct @ FACT.h:117:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Struct @ FACT.h:117:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Explicit, Size = 80, Pack = 8)]
     public struct FACTRuntimeParameters
     {
@@ -1479,7 +1479,7 @@ public static unsafe partial class _FAudio
         public FAudioMasteringVoice* pMasteringVoice;
     }
 
-    // Struct @ FACT.h:125:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Struct @ FACT.h:125:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Explicit, Size = 24, Pack = 8)]
     public struct FACTStreamingParameters
     {
@@ -1496,7 +1496,7 @@ public static unsafe partial class _FAudio
         public ushort packetSize;
     }
 
-    // Struct @ FACT.h:196:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Struct @ FACT.h:196:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Explicit, Size = 24, Pack = 1)]
     public struct FACTWaveBankEntry
     {
@@ -1510,7 +1510,7 @@ public static unsafe partial class _FAudio
         public FACTWaveBankSampleRegion LoopRegion;
     }
 
-    // Struct @ FACT.h:297:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Struct @ FACT.h:297:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Explicit, Size = 46, Pack = 1)]
     public struct FACTNotificationDescription
     {
@@ -1542,7 +1542,7 @@ public static unsafe partial class _FAudio
         public void* pvContext;
     }
 
-    // Struct @ FACT.h:241:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Struct @ FACT.h:241:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Explicit, Size = 268, Pack = 4)]
     public struct FACTCueProperties
     {
@@ -1578,7 +1578,7 @@ public static unsafe partial class _FAudio
         public byte currentInstances;
     }
 
-    // Struct @ FACT.h:225:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Struct @ FACT.h:225:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Explicit, Size = 84, Pack = 4)]
     public struct FACTWaveProperties
     {
@@ -1611,7 +1611,7 @@ public static unsafe partial class _FAudio
         public int streaming;
     }
 
-    // Struct @ FACT.h:231:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Struct @ FACT.h:231:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Explicit, Size = 88, Pack = 4)]
     public struct FACTWaveInstanceProperties
     {
@@ -1622,7 +1622,7 @@ public static unsafe partial class _FAudio
         public int backgroundMusic;
     }
 
-    // Struct @ FACT.h:282:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Struct @ FACT.h:282:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Explicit, Size = 316, Pack = 4)]
     public struct FACTCueInstanceProperties
     {
@@ -1636,7 +1636,7 @@ public static unsafe partial class _FAudio
         public FACTSoundVariationProperties activeVariationProperties;
     }
 
-    // Struct @ FAPOBase.h:97:25 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // Struct @ FAPOBase.h:97:25 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     [StructLayout(LayoutKind.Explicit, Size = 224, Pack = 8)]
     public struct FAPOBase
     {
@@ -1701,7 +1701,7 @@ public static unsafe partial class _FAudio
         public FAudioReallocFunc pRealloc;
     }
 
-    // Struct @ FAPO.h:75:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // Struct @ FAPO.h:75:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     [StructLayout(LayoutKind.Explicit, Size = 1068, Pack = 1)]
     public struct FAPORegistrationProperties
     {
@@ -1762,7 +1762,7 @@ public static unsafe partial class _FAudio
         public uint MaxOutputBufferCount;
     }
 
-    // Struct @ FAPO.h:81:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // Struct @ FAPO.h:81:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     [StructLayout(LayoutKind.Explicit, Size = 12, Pack = 1)]
     public struct FAPOLockForProcessBufferParameters
     {
@@ -1773,7 +1773,7 @@ public static unsafe partial class _FAudio
         public uint MaxFrameCount;
     }
 
-    // Struct @ FAudio.h:219:21 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Struct @ FAudio.h:219:21 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 112, Pack = 8)]
     public struct FAPO
     {
@@ -1820,7 +1820,7 @@ public static unsafe partial class _FAudio
         public GetParametersFunc GetParameters;
     }
 
-    // Struct @ FAudioFX.h:127:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // Struct @ FAudioFX.h:127:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     [StructLayout(LayoutKind.Explicit, Size = 52, Pack = 1)]
     public struct FAudioFXReverbI3DL2Parameters
     {
@@ -1864,7 +1864,7 @@ public static unsafe partial class _FAudio
         public float HFReference;
     }
 
-    // Struct @ FAudioFX.h:83:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // Struct @ FAudioFX.h:83:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     [StructLayout(LayoutKind.Explicit, Size = 52, Pack = 1)]
     public struct FAudioFXReverbParameters
     {
@@ -1935,7 +1935,7 @@ public static unsafe partial class _FAudio
         public float RoomSize;
     }
 
-    // Struct @ FAudioFX.h:110:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // Struct @ FAudioFX.h:110:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     [StructLayout(LayoutKind.Explicit, Size = 53, Pack = 1)]
     public struct FAudioFXReverbParameters9
     {
@@ -2009,7 +2009,7 @@ public static unsafe partial class _FAudio
         public float RoomSize;
     }
 
-    // Struct @ F3DAudio.h:155:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // Struct @ F3DAudio.h:155:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 12, Pack = 1)]
     public struct F3DAUDIO_VECTOR
     {
@@ -2023,7 +2023,7 @@ public static unsafe partial class _FAudio
         public float z;
     }
 
-    // Struct @ F3DAudio.h:179:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // Struct @ F3DAudio.h:179:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 32, Pack = 1)]
     public struct F3DAUDIO_CONE
     {
@@ -2052,7 +2052,7 @@ public static unsafe partial class _FAudio
         public float OuterReverb;
     }
 
-    // Struct @ F3DAudio.h:167:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // Struct @ F3DAudio.h:167:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 12, Pack = 1)]
     public struct F3DAUDIO_DISTANCE_CURVE
     {
@@ -2063,7 +2063,7 @@ public static unsafe partial class _FAudio
         public uint PointCount;
     }
 
-    // Struct @ FAudio.h:209:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Struct @ FAudio.h:209:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 12, Pack = 1)]
     public struct FAudioSendDescriptor
     {
@@ -2074,7 +2074,7 @@ public static unsafe partial class _FAudio
         public FAudioVoice* pOutputVoice;
     }
 
-    // Struct @ FAudio.h:227:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Struct @ FAudio.h:227:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 16, Pack = 1)]
     public struct FAudioEffectDescriptor
     {
@@ -2088,7 +2088,7 @@ public static unsafe partial class _FAudio
         public uint OutputChannels;
     }
 
-    // Struct @ FACT.h:98:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Struct @ FACT.h:98:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Explicit, Size = 16, Pack = 8)]
     public struct FACTFileIOCallbacks
     {
@@ -2099,7 +2099,7 @@ public static unsafe partial class _FAudio
         public FACTGetOverlappedResultCallback getOverlappedResultCallback;
     }
 
-    // Struct @ FACT.h:180:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Struct @ FACT.h:180:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Explicit, Size = 4, Pack = 1)]
     public struct FACTWaveBankMiniWaveFormat
     {
@@ -2107,7 +2107,7 @@ public static unsafe partial class _FAudio
         public uint dwValue;
     }
 
-    // Struct @ FACT.h:153:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Struct @ FACT.h:153:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Explicit, Size = 8, Pack = 1)]
     public struct FACTWaveBankRegion
     {
@@ -2118,7 +2118,7 @@ public static unsafe partial class _FAudio
         public uint dwLength;
     }
 
-    // Struct @ FACT.h:159:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Struct @ FACT.h:159:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Explicit, Size = 8, Pack = 1)]
     public struct FACTWaveBankSampleRegion
     {
@@ -2129,7 +2129,7 @@ public static unsafe partial class _FAudio
         public uint dwTotalSamples;
     }
 
-    // Struct @ FACT.h:275:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Struct @ FACT.h:275:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Explicit, Size = 44, Pack = 4)]
     public struct FACTSoundVariationProperties
     {
@@ -2140,7 +2140,7 @@ public static unsafe partial class _FAudio
         public FACTSoundProperties soundProperties;
     }
 
-    // Struct @ F3DAudio.h:161:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // Struct @ F3DAudio.h:161:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 8, Pack = 1)]
     public struct F3DAUDIO_DISTANCE_CURVE_POINT
     {
@@ -2151,7 +2151,7 @@ public static unsafe partial class _FAudio
         public float DSPSetting;
     }
 
-    // Struct @ FACT.h:54:33 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Struct @ FACT.h:54:33 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Explicit, Size = 49, Pack = 1)]
     public struct FACTNotification
     {
@@ -2165,7 +2165,7 @@ public static unsafe partial class _FAudio
         public void* pvContext;
     }
 
-    // Struct @ FACT.h:259:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Struct @ FACT.h:259:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Explicit, Size = 16, Pack = 4)]
     public struct FACTVariationProperties
     {
@@ -2185,7 +2185,7 @@ public static unsafe partial class _FAudio
         public int linger;
     }
 
-    // Struct @ FACT.h:269:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Struct @ FACT.h:269:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Explicit, Size = 28, Pack = 4)]
     public struct FACTSoundProperties
     {
@@ -2221,7 +2221,7 @@ public static unsafe partial class _FAudio
         }
     }
 
-    // Struct @ FAPO.h:88:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // Struct @ FAPO.h:88:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     [StructLayout(LayoutKind.Explicit, Size = 16, Pack = 1)]
     public struct FAPOProcessBufferParameters
     {
@@ -2235,7 +2235,7 @@ public static unsafe partial class _FAudio
         public uint ValidFrameCount;
     }
 
-    // Struct @ FACT.h:77:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Struct @ FACT.h:77:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Explicit, Size = 32, Pack = 8)]
     public struct FACTOverlapped
     {
@@ -2249,7 +2249,7 @@ public static unsafe partial class _FAudio
         public void* hEvent;
     }
 
-    // Struct @ FACT.h:250:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Struct @ FACT.h:250:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Explicit, Size = 12, Pack = 4)]
     public struct FACTTrackProperties
     {
@@ -2269,67 +2269,67 @@ public static unsafe partial class _FAudio
         public byte loopCount;
     }
 
-    // OpaqueType @ FAudio.h:62:23 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // OpaqueType @ FAudio.h:62:23 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FAudio
     {
     }
 
-    // OpaqueType @ FAudio.h:64:21 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // OpaqueType @ FAudio.h:64:21 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FAudioSourceVoice
     {
     }
 
-    // OpaqueType @ FAudio.h:65:21 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // OpaqueType @ FAudio.h:65:21 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FAudioSubmixVoice
     {
     }
 
-    // OpaqueType @ FAudio.h:66:21 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // OpaqueType @ FAudio.h:66:21 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FAudioMasteringVoice
     {
     }
 
-    // OpaqueType @ FAudio.h:63:28 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // OpaqueType @ FAudio.h:63:28 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FAudioVoice
     {
     }
 
-    // OpaqueType @ FACT.h:49:32 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // OpaqueType @ FACT.h:49:32 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FACTAudioEngine
     {
     }
 
-    // OpaqueType @ FACT.h:50:30 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // OpaqueType @ FACT.h:50:30 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FACTSoundBank
     {
     }
 
-    // OpaqueType @ FACT.h:51:29 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // OpaqueType @ FACT.h:51:29 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FACTWaveBank
     {
     }
 
-    // OpaqueType @ FACT.h:52:25 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // OpaqueType @ FACT.h:52:25 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FACTWave
     {
     }
 
-    // OpaqueType @ FACT.h:53:24 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // OpaqueType @ FACT.h:53:24 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     [StructLayout(LayoutKind.Sequential)]
     public struct FACTCue
     {
     }
 
-    // Typedef @ F3DAudio.h:144:17 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // Typedef @ F3DAudio.h:144:17 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 20, Pack = 1)]
     public struct F3DAUDIO_HANDLE
     {
@@ -2340,7 +2340,7 @@ public static unsafe partial class _FAudio
         public static implicit operator F3DAUDIO_HANDLE(byte* data) => new() { Data = data };
     }
 
-    // Typedef @ FAudio.h:108:18 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Typedef @ FAudio.h:108:18 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     [StructLayout(LayoutKind.Explicit, Size = 4, Pack = 4)]
     public struct FAudioProcessor
     {
@@ -2351,7 +2351,7 @@ public static unsafe partial class _FAudio
         public static implicit operator FAudioProcessor(uint data) => new() { Data = data };
     }
 
-    // Enum @ FAudio.h:105:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Enum @ FAudio.h:105:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public enum FAudioStreamCategory : int
     {
         FAudioStreamCategory_Other = 0,
@@ -2368,7 +2368,7 @@ public static unsafe partial class _FAudio
         FAudioStreamCategory_Media = 11
     }
 
-    // Enum @ FAudio.h:81:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Enum @ FAudio.h:81:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public enum FAudioDeviceRole : int
     {
         FAudioNotDefaultDevice = 0,
@@ -2380,7 +2380,7 @@ public static unsafe partial class _FAudio
         FAudioInvalidDeviceRole = -16
     }
 
-    // Enum @ FAudio.h:89:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // Enum @ FAudio.h:89:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public enum FAudioFilterType : int
     {
         FAudioLowPassFilter = 0,
@@ -2389,14 +2389,14 @@ public static unsafe partial class _FAudio
         FAudioNotchFilter = 3
     }
 
-    // Enum @ FAPO.h:57:3 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // Enum @ FAPO.h:57:3 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     public enum FAPOBufferFlags : int
     {
         FAPO_BUFFER_SILENT = 0,
         FAPO_BUFFER_VALID = 1
     }
 
-    // Pseudo enum 'FACTWaveBankSegIdx' @ FACT.h:137:14 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // Pseudo enum 'FACTWaveBankSegIdx' @ FACT.h:137:14 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     public const int FACT_WAVEBANK_SEGIDX_BANKDATA = 0;
     public const int FACT_WAVEBANK_SEGIDX_ENTRYMETADATA = 1;
     public const int FACT_WAVEBANK_SEGIDX_SEEKTABLES = 2;
@@ -2404,741 +2404,741 @@ public static unsafe partial class _FAudio
     public const int FACT_WAVEBANK_SEGIDX_ENTRYWAVEDATA = 4;
     public const int FACT_WAVEBANK_SEGIDX_COUNT = 5;
 
-    // MacroObjectLike @ F3DAudio.h:49:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:49:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_FRONT_LEFT = 0x00000001;
 
-    // MacroObjectLike @ F3DAudio.h:50:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:50:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_FRONT_RIGHT = 0x00000002;
 
-    // MacroObjectLike @ F3DAudio.h:51:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:51:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_FRONT_CENTER = 0x00000004;
 
-    // MacroObjectLike @ F3DAudio.h:52:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:52:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_LOW_FREQUENCY = 0x00000008;
 
-    // MacroObjectLike @ F3DAudio.h:53:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:53:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_BACK_LEFT = 0x00000010;
 
-    // MacroObjectLike @ F3DAudio.h:54:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:54:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_BACK_RIGHT = 0x00000020;
 
-    // MacroObjectLike @ F3DAudio.h:55:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:55:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_FRONT_LEFT_OF_CENTER = 0x00000040;
 
-    // MacroObjectLike @ F3DAudio.h:56:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:56:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_FRONT_RIGHT_OF_CENTER = 0x00000080;
 
-    // MacroObjectLike @ F3DAudio.h:57:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:57:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_BACK_CENTER = 0x00000100;
 
-    // MacroObjectLike @ F3DAudio.h:58:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:58:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_SIDE_LEFT = 0x00000200;
 
-    // MacroObjectLike @ F3DAudio.h:59:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:59:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_SIDE_RIGHT = 0x00000400;
 
-    // MacroObjectLike @ F3DAudio.h:60:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:60:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_TOP_CENTER = 0x00000800;
 
-    // MacroObjectLike @ F3DAudio.h:61:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:61:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_TOP_FRONT_LEFT = 0x00001000;
 
-    // MacroObjectLike @ F3DAudio.h:62:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:62:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_TOP_FRONT_CENTER = 0x00002000;
 
-    // MacroObjectLike @ F3DAudio.h:63:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:63:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_TOP_FRONT_RIGHT = 0x00004000;
 
-    // MacroObjectLike @ F3DAudio.h:64:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:64:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_TOP_BACK_LEFT = 0x00008000;
 
-    // MacroObjectLike @ F3DAudio.h:65:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:65:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_TOP_BACK_CENTER = 0x00010000;
 
-    // MacroObjectLike @ F3DAudio.h:66:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:66:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_TOP_BACK_RIGHT = 0x00020000;
 
-    // MacroObjectLike @ F3DAudio.h:71:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:71:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_MONO = SPEAKER_FRONT_CENTER;
 
-    // MacroObjectLike @ F3DAudio.h:72:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:72:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_STEREO = SPEAKER_FRONT_LEFT | SPEAKER_FRONT_RIGHT;
 
-    // MacroObjectLike @ F3DAudio.h:73:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:73:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_2POINT1 = SPEAKER_FRONT_LEFT | SPEAKER_FRONT_RIGHT | SPEAKER_LOW_FREQUENCY;
 
-    // MacroObjectLike @ F3DAudio.h:77:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:77:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_SURROUND = SPEAKER_FRONT_LEFT | SPEAKER_FRONT_RIGHT | SPEAKER_FRONT_CENTER | SPEAKER_BACK_CENTER;
 
-    // MacroObjectLike @ F3DAudio.h:82:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:82:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_QUAD = SPEAKER_FRONT_LEFT | SPEAKER_FRONT_RIGHT | SPEAKER_BACK_LEFT | SPEAKER_BACK_RIGHT;
 
-    // MacroObjectLike @ F3DAudio.h:87:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:87:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_4POINT1 = SPEAKER_FRONT_LEFT | SPEAKER_FRONT_RIGHT | SPEAKER_LOW_FREQUENCY | SPEAKER_BACK_LEFT | SPEAKER_BACK_RIGHT;
 
-    // MacroObjectLike @ F3DAudio.h:93:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:93:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_5POINT1 = SPEAKER_FRONT_LEFT | SPEAKER_FRONT_RIGHT | SPEAKER_FRONT_CENTER | SPEAKER_LOW_FREQUENCY | SPEAKER_BACK_LEFT | SPEAKER_BACK_RIGHT;
 
-    // MacroObjectLike @ F3DAudio.h:100:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:100:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_7POINT1 = SPEAKER_FRONT_LEFT | SPEAKER_FRONT_RIGHT | SPEAKER_FRONT_CENTER | SPEAKER_LOW_FREQUENCY | SPEAKER_BACK_LEFT | SPEAKER_BACK_RIGHT | SPEAKER_FRONT_LEFT_OF_CENTER | SPEAKER_FRONT_RIGHT_OF_CENTER;
 
-    // MacroObjectLike @ F3DAudio.h:109:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:109:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_5POINT1_SURROUND = SPEAKER_FRONT_LEFT | SPEAKER_FRONT_RIGHT | SPEAKER_FRONT_CENTER | SPEAKER_LOW_FREQUENCY | SPEAKER_SIDE_LEFT | SPEAKER_SIDE_RIGHT;
 
-    // MacroObjectLike @ F3DAudio.h:116:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:116:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int SPEAKER_7POINT1_SURROUND = SPEAKER_FRONT_LEFT | SPEAKER_FRONT_RIGHT | SPEAKER_FRONT_CENTER | SPEAKER_LOW_FREQUENCY | SPEAKER_BACK_LEFT | SPEAKER_BACK_RIGHT | SPEAKER_SIDE_LEFT | SPEAKER_SIDE_RIGHT;
 
-    // MacroObjectLike @ F3DAudio.h:128:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:128:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const float F3DAUDIO_PI = 3.141592654f;
 
-    // MacroObjectLike @ F3DAudio.h:129:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:129:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const float F3DAUDIO_2PI = 6.283185307f;
 
-    // MacroObjectLike @ F3DAudio.h:131:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:131:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int F3DAUDIO_CALCULATE_MATRIX = 0x00000001;
 
-    // MacroObjectLike @ F3DAudio.h:132:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:132:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int F3DAUDIO_CALCULATE_DELAY = 0x00000002;
 
-    // MacroObjectLike @ F3DAudio.h:133:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:133:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int F3DAUDIO_CALCULATE_LPF_DIRECT = 0x00000004;
 
-    // MacroObjectLike @ F3DAudio.h:134:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:134:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int F3DAUDIO_CALCULATE_LPF_REVERB = 0x00000008;
 
-    // MacroObjectLike @ F3DAudio.h:135:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:135:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int F3DAUDIO_CALCULATE_REVERB = 0x00000010;
 
-    // MacroObjectLike @ F3DAudio.h:136:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:136:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int F3DAUDIO_CALCULATE_DOPPLER = 0x00000020;
 
-    // MacroObjectLike @ F3DAudio.h:137:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:137:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int F3DAUDIO_CALCULATE_EMITTER_ANGLE = 0x00000040;
 
-    // MacroObjectLike @ F3DAudio.h:138:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:138:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int F3DAUDIO_CALCULATE_ZEROCENTER = 0x00010000;
 
-    // MacroObjectLike @ F3DAudio.h:139:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:139:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int F3DAUDIO_CALCULATE_REDIRECT_TO_LFE = 0x00020000;
 
-    // MacroObjectLike @ F3DAudio.h:143:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/F3DAudio.h)
+    // MacroObjectLike @ F3DAudio.h:143:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/F3DAudio.h)
     public const int F3DAUDIO_HANDLE_BYTESIZE = 20;
 
-    // MacroObjectLike @ FAudio.h:109:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:109:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const uint FAUDIO_DEFAULT_PROCESSOR = 0xFFFFFFFF;
 
-    // MacroObjectLike @ FAudio.h:336:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:336:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const uint FAUDIO_E_OUT_OF_MEMORY = 0x8007000e;
 
-    // MacroObjectLike @ FAudio.h:337:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:337:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const uint FAUDIO_E_INVALID_ARG = 0x80070057;
 
-    // MacroObjectLike @ FAudio.h:338:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:338:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const uint FAUDIO_E_UNSUPPORTED_FORMAT = 0x88890008;
 
-    // MacroObjectLike @ FAudio.h:339:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:339:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const uint FAUDIO_E_INVALID_CALL = 0x88960001;
 
-    // MacroObjectLike @ FAudio.h:340:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:340:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const uint FAUDIO_E_DEVICE_INVALIDATED = 0x88960004;
 
-    // MacroObjectLike @ FAudio.h:341:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:341:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const uint FAPO_E_FORMAT_UNSUPPORTED = 0x88970001;
 
-    // MacroObjectLike @ FAudio.h:343:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:343:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const uint FAUDIO_MAX_BUFFER_BYTES = 0x80000000;
 
-    // MacroObjectLike @ FAudio.h:344:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:344:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_MAX_QUEUED_BUFFERS = 64;
 
-    // MacroObjectLike @ FAudio.h:345:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:345:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_MAX_AUDIO_CHANNELS = 64;
 
-    // MacroObjectLike @ FAudio.h:346:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:346:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_MIN_SAMPLE_RATE = 1000;
 
-    // MacroObjectLike @ FAudio.h:347:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:347:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_MAX_SAMPLE_RATE = 200000;
 
-    // MacroObjectLike @ FAudio.h:348:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:348:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const float FAUDIO_MAX_VOLUME_LEVEL = 16777216.0f;
 
-    // MacroObjectLike @ FAudio.h:349:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:349:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const float FAUDIO_MIN_FREQ_RATIO = 1.0f / 1024.0f;
 
-    // MacroObjectLike @ FAudio.h:350:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:350:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const float FAUDIO_MAX_FREQ_RATIO = 1024.0f;
 
-    // MacroObjectLike @ FAudio.h:351:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:351:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const float FAUDIO_DEFAULT_FREQ_RATIO = 2.0f;
 
-    // MacroObjectLike @ FAudio.h:352:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:352:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const float FAUDIO_MAX_FILTER_ONEOVERQ = 1.5f;
 
-    // MacroObjectLike @ FAudio.h:353:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:353:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const float FAUDIO_MAX_FILTER_FREQUENCY = 1.0f;
 
-    // MacroObjectLike @ FAudio.h:354:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:354:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_MAX_LOOP_COUNT = 254;
 
-    // MacroObjectLike @ FAudio.h:356:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:356:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_COMMIT_NOW = 0;
 
-    // MacroObjectLike @ FAudio.h:357:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:357:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_COMMIT_ALL = 0;
 
-    // MacroObjectLike @ FAudio.h:359:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:359:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_NO_LOOP_REGION = 0;
 
-    // MacroObjectLike @ FAudio.h:360:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:360:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_LOOP_INFINITE = 255;
 
-    // MacroObjectLike @ FAudio.h:361:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:361:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_DEFAULT_CHANNELS = 0;
 
-    // MacroObjectLike @ FAudio.h:362:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:362:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_DEFAULT_SAMPLERATE = 0;
 
-    // MacroObjectLike @ FAudio.h:364:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:364:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_DEBUG_ENGINE = 0x0001;
 
-    // MacroObjectLike @ FAudio.h:365:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:365:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_VOICE_NOPITCH = 0x0002;
 
-    // MacroObjectLike @ FAudio.h:366:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:366:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_VOICE_NOSRC = 0x0004;
 
-    // MacroObjectLike @ FAudio.h:367:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:367:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_VOICE_USEFILTER = 0x0008;
 
-    // MacroObjectLike @ FAudio.h:368:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:368:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_VOICE_MUSIC = 0x0010;
 
-    // MacroObjectLike @ FAudio.h:369:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:369:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_PLAY_TAILS = 0x0020;
 
-    // MacroObjectLike @ FAudio.h:370:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:370:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_END_OF_STREAM = 0x0040;
 
-    // MacroObjectLike @ FAudio.h:371:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:371:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_SEND_USEFILTER = 0x0080;
 
-    // MacroObjectLike @ FAudio.h:372:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:372:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_VOICE_NOSAMPLESPLAYED = 0x0100;
 
-    // MacroObjectLike @ FAudio.h:373:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:373:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_1024_QUANTUM = 0x8000;
 
-    // MacroObjectLike @ FAudio.h:376:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:376:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const float FAUDIO_DEFAULT_FILTER_FREQUENCY = FAUDIO_MAX_FILTER_FREQUENCY;
 
-    // MacroObjectLike @ FAudio.h:377:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:377:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const float FAUDIO_DEFAULT_FILTER_ONEOVERQ = 1.0f;
 
-    // MacroObjectLike @ FAudio.h:379:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:379:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_LOG_ERRORS = 0x0001;
 
-    // MacroObjectLike @ FAudio.h:380:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:380:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_LOG_WARNINGS = 0x0002;
 
-    // MacroObjectLike @ FAudio.h:381:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:381:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_LOG_INFO = 0x0004;
 
-    // MacroObjectLike @ FAudio.h:382:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:382:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_LOG_DETAIL = 0x0008;
 
-    // MacroObjectLike @ FAudio.h:383:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:383:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_LOG_API_CALLS = 0x0010;
 
-    // MacroObjectLike @ FAudio.h:384:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:384:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_LOG_FUNC_CALLS = 0x0020;
 
-    // MacroObjectLike @ FAudio.h:385:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:385:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_LOG_TIMING = 0x0040;
 
-    // MacroObjectLike @ FAudio.h:386:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:386:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_LOG_LOCKS = 0x0080;
 
-    // MacroObjectLike @ FAudio.h:387:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:387:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_LOG_MEMORY = 0x0100;
 
-    // MacroObjectLike @ FAudio.h:388:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:388:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_LOG_STREAMING = 0x1000;
 
-    // MacroObjectLike @ FAudio.h:470:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:470:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_FORMAT_PCM = 1;
 
-    // MacroObjectLike @ FAudio.h:471:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:471:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_FORMAT_MSADPCM = 2;
 
-    // MacroObjectLike @ FAudio.h:472:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:472:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_FORMAT_IEEE_FLOAT = 3;
 
-    // MacroObjectLike @ FAudio.h:473:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:473:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_FORMAT_WMAUDIO2 = 0x0161;
 
-    // MacroObjectLike @ FAudio.h:474:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:474:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_FORMAT_WMAUDIO3 = 0x0162;
 
-    // MacroObjectLike @ FAudio.h:475:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:475:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_FORMAT_WMAUDIO_LOSSLESS = 0x0163;
 
-    // MacroObjectLike @ FAudio.h:476:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:476:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_FORMAT_XMAUDIO2 = 0x0166;
 
-    // MacroObjectLike @ FAudio.h:477:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:477:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_FORMAT_EXTENSIBLE = 0xFFFE;
 
-    // MacroObjectLike @ FAudio.h:484:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:484:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_TARGET_VERSION = 8;
 
-    // MacroObjectLike @ FAudio.h:486:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:486:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_ABI_VERSION = 0;
 
-    // MacroObjectLike @ FAudio.h:487:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:487:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_MAJOR_VERSION = 21;
 
-    // MacroObjectLike @ FAudio.h:488:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:488:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_MINOR_VERSION = 9;
 
-    // MacroObjectLike @ FAudio.h:489:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:489:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_PATCH_VERSION = 0;
 
-    // MacroObjectLike @ FAudio.h:491:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:491:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_COMPILED_VERSION = (FAUDIO_ABI_VERSION * 100 * 100 * 100) + (FAUDIO_MAJOR_VERSION * 100 * 100) + (FAUDIO_MINOR_VERSION * 100) + (FAUDIO_PATCH_VERSION);
 
-    // MacroObjectLike @ FAudio.h:1282:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:1282:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_SEEK_SET = 0;
 
-    // MacroObjectLike @ FAudio.h:1283:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:1283:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_SEEK_CUR = 1;
 
-    // MacroObjectLike @ FAudio.h:1284:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:1284:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_SEEK_END = 2;
 
-    // MacroObjectLike @ FAudio.h:1285:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudio.h)
+    // MacroObjectLike @ FAudio.h:1285:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_EOF = -1;
 
-    // MacroObjectLike @ FACT.h:127:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // MacroObjectLike @ FACT.h:127:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     public const int FACT_WAVEBANK_TYPE_BUFFER = 0x00000000;
 
-    // MacroObjectLike @ FACT.h:128:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // MacroObjectLike @ FACT.h:128:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     public const int FACT_WAVEBANK_TYPE_STREAMING = 0x00000001;
 
-    // MacroObjectLike @ FACT.h:129:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // MacroObjectLike @ FACT.h:129:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     public const int FACT_WAVEBANK_TYPE_MASK = 0x00000001;
 
-    // MacroObjectLike @ FACT.h:131:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // MacroObjectLike @ FACT.h:131:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     public const int FACT_WAVEBANK_FLAGS_ENTRYNAMES = 0x00010000;
 
-    // MacroObjectLike @ FACT.h:132:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // MacroObjectLike @ FACT.h:132:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     public const int FACT_WAVEBANK_FLAGS_COMPACT = 0x00020000;
 
-    // MacroObjectLike @ FACT.h:133:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // MacroObjectLike @ FACT.h:133:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     public const int FACT_WAVEBANK_FLAGS_SYNC_DISABLED = 0x00040000;
 
-    // MacroObjectLike @ FACT.h:134:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // MacroObjectLike @ FACT.h:134:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     public const int FACT_WAVEBANK_FLAGS_SEEKTABLES = 0x00080000;
 
-    // MacroObjectLike @ FACT.h:135:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // MacroObjectLike @ FACT.h:135:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     public const int FACT_WAVEBANK_FLAGS_MASK = 0x000F0000;
 
-    // MacroObjectLike @ FACT.h:370:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // MacroObjectLike @ FACT.h:370:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     public const int FACT_CONTENT_VERSION = 46;
 
-    // MacroObjectLike @ FACT.h:424:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // MacroObjectLike @ FACT.h:424:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     public const int FACT_ENGINE_LOOKAHEAD_DEFAULT = 250;
 
-    // MacroObjectLike @ FACT.h:426:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // MacroObjectLike @ FACT.h:426:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     public const int FACT_MAX_WMA_AVG_BYTES_PER_SEC_ENTRIES = 7;
 
-    // MacroObjectLike @ FACT.h:438:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT.h)
+    // MacroObjectLike @ FACT.h:438:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT.h)
     public const int FACT_MAX_WMA_BLOCK_ALIGN_ENTRIES = 17;
 
-    // MacroObjectLike @ FACT3D.h:43:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT3D.h)
+    // MacroObjectLike @ FACT3D.h:43:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT3D.h)
     public const float LEFT_AZIMUTH = 3.0f * F3DAUDIO_PI / 2.0f;
 
-    // MacroObjectLike @ FACT3D.h:44:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT3D.h)
+    // MacroObjectLike @ FACT3D.h:44:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT3D.h)
     public const float RIGHT_AZIMUTH = F3DAUDIO_PI / 2.0f;
 
-    // MacroObjectLike @ FACT3D.h:45:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT3D.h)
+    // MacroObjectLike @ FACT3D.h:45:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT3D.h)
     public const float FRONT_LEFT_AZIMUTH = 7.0f * F3DAUDIO_PI / 4.0f;
 
-    // MacroObjectLike @ FACT3D.h:46:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT3D.h)
+    // MacroObjectLike @ FACT3D.h:46:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT3D.h)
     public const float FRONT_RIGHT_AZIMUTH = F3DAUDIO_PI / 4.0f;
 
-    // MacroObjectLike @ FACT3D.h:47:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT3D.h)
+    // MacroObjectLike @ FACT3D.h:47:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT3D.h)
     public const float FRONT_CENTER_AZIMUTH = 0.0f;
 
-    // MacroObjectLike @ FACT3D.h:48:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT3D.h)
+    // MacroObjectLike @ FACT3D.h:48:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT3D.h)
     public const float LOW_FREQUENCY_AZIMUTH = F3DAUDIO_2PI;
 
-    // MacroObjectLike @ FACT3D.h:49:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT3D.h)
+    // MacroObjectLike @ FACT3D.h:49:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT3D.h)
     public const float BACK_LEFT_AZIMUTH = 5.0f * F3DAUDIO_PI / 4.0f;
 
-    // MacroObjectLike @ FACT3D.h:50:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT3D.h)
+    // MacroObjectLike @ FACT3D.h:50:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT3D.h)
     public const float BACK_RIGHT_AZIMUTH = 3.0f * F3DAUDIO_PI / 4.0f;
 
-    // MacroObjectLike @ FACT3D.h:51:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT3D.h)
+    // MacroObjectLike @ FACT3D.h:51:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT3D.h)
     public const float BACK_CENTER_AZIMUTH = F3DAUDIO_PI;
 
-    // MacroObjectLike @ FACT3D.h:52:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT3D.h)
+    // MacroObjectLike @ FACT3D.h:52:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT3D.h)
     public const float FRONT_LEFT_OF_CENTER_AZIMUTH = 15.0f * F3DAUDIO_PI / 8.0f;
 
-    // MacroObjectLike @ FACT3D.h:53:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FACT3D.h)
+    // MacroObjectLike @ FACT3D.h:53:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FACT3D.h)
     public const float FRONT_RIGHT_OF_CENTER_AZIMUTH = F3DAUDIO_PI / 8.0f;
 
-    // MacroObjectLike @ FAPO.h:94:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // MacroObjectLike @ FAPO.h:94:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     public const int FAPO_MIN_CHANNELS = 1;
 
-    // MacroObjectLike @ FAPO.h:95:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // MacroObjectLike @ FAPO.h:95:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     public const int FAPO_MAX_CHANNELS = 64;
 
-    // MacroObjectLike @ FAPO.h:97:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // MacroObjectLike @ FAPO.h:97:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     public const int FAPO_MIN_FRAMERATE = 1000;
 
-    // MacroObjectLike @ FAPO.h:98:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // MacroObjectLike @ FAPO.h:98:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     public const int FAPO_MAX_FRAMERATE = 200000;
 
-    // MacroObjectLike @ FAPO.h:100:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // MacroObjectLike @ FAPO.h:100:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     public const int FAPO_REGISTRATION_STRING_LENGTH = 256;
 
-    // MacroObjectLike @ FAPO.h:102:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // MacroObjectLike @ FAPO.h:102:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     public const int FAPO_FLAG_CHANNELS_MUST_MATCH = 0x00000001;
 
-    // MacroObjectLike @ FAPO.h:103:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // MacroObjectLike @ FAPO.h:103:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     public const int FAPO_FLAG_FRAMERATE_MUST_MATCH = 0x00000002;
 
-    // MacroObjectLike @ FAPO.h:104:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // MacroObjectLike @ FAPO.h:104:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     public const int FAPO_FLAG_BITSPERSAMPLE_MUST_MATCH = 0x00000004;
 
-    // MacroObjectLike @ FAPO.h:105:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // MacroObjectLike @ FAPO.h:105:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     public const int FAPO_FLAG_BUFFERCOUNT_MUST_MATCH = 0x00000008;
 
-    // MacroObjectLike @ FAPO.h:106:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // MacroObjectLike @ FAPO.h:106:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     public const int FAPO_FLAG_INPLACE_REQUIRED = 0x00000020;
 
-    // MacroObjectLike @ FAPO.h:107:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPO.h)
+    // MacroObjectLike @ FAPO.h:107:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPO.h)
     public const int FAPO_FLAG_INPLACE_SUPPORTED = 0x00000010;
 
-    // MacroObjectLike @ FAPOBase.h:78:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // MacroObjectLike @ FAPOBase.h:78:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     public const int FAPOBASE_DEFAULT_FORMAT_TAG = FAUDIO_FORMAT_IEEE_FLOAT;
 
-    // MacroObjectLike @ FAPOBase.h:79:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // MacroObjectLike @ FAPOBase.h:79:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     public const int FAPOBASE_DEFAULT_FORMAT_MIN_CHANNELS = FAPO_MIN_CHANNELS;
 
-    // MacroObjectLike @ FAPOBase.h:80:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // MacroObjectLike @ FAPOBase.h:80:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     public const int FAPOBASE_DEFAULT_FORMAT_MAX_CHANNELS = FAPO_MAX_CHANNELS;
 
-    // MacroObjectLike @ FAPOBase.h:81:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // MacroObjectLike @ FAPOBase.h:81:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     public const int FAPOBASE_DEFAULT_FORMAT_MIN_FRAMERATE = FAPO_MIN_FRAMERATE;
 
-    // MacroObjectLike @ FAPOBase.h:82:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // MacroObjectLike @ FAPOBase.h:82:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     public const int FAPOBASE_DEFAULT_FORMAT_MAX_FRAMERATE = FAPO_MAX_FRAMERATE;
 
-    // MacroObjectLike @ FAPOBase.h:83:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // MacroObjectLike @ FAPOBase.h:83:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     public const int FAPOBASE_DEFAULT_FORMAT_BITSPERSAMPLE = 32;
 
-    // MacroObjectLike @ FAPOBase.h:85:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // MacroObjectLike @ FAPOBase.h:85:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     public const int FAPOBASE_DEFAULT_FLAG = FAPO_FLAG_CHANNELS_MUST_MATCH | FAPO_FLAG_FRAMERATE_MUST_MATCH | FAPO_FLAG_BITSPERSAMPLE_MUST_MATCH | FAPO_FLAG_BUFFERCOUNT_MUST_MATCH | FAPO_FLAG_INPLACE_SUPPORTED;
 
-    // MacroObjectLike @ FAPOBase.h:93:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOBase.h)
+    // MacroObjectLike @ FAPOBase.h:93:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOBase.h)
     public const int FAPOBASE_DEFAULT_BUFFER_COUNT = 1;
 
-    // MacroObjectLike @ FAPOFX.h:97:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:97:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const int FAPOFXEQ_MIN_FRAMERATE = 22000;
 
-    // MacroObjectLike @ FAPOFX.h:98:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:98:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const int FAPOFXEQ_MAX_FRAMERATE = 48000;
 
-    // MacroObjectLike @ FAPOFX.h:100:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:100:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXEQ_MIN_FREQUENCY_CENTER = 20.0f;
 
-    // MacroObjectLike @ FAPOFX.h:101:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:101:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXEQ_MAX_FREQUENCY_CENTER = 20000.0f;
 
-    // MacroObjectLike @ FAPOFX.h:102:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:102:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXEQ_DEFAULT_FREQUENCY_CENTER_0 = 100.0f;
 
-    // MacroObjectLike @ FAPOFX.h:103:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:103:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXEQ_DEFAULT_FREQUENCY_CENTER_1 = 800.0f;
 
-    // MacroObjectLike @ FAPOFX.h:104:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:104:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXEQ_DEFAULT_FREQUENCY_CENTER_2 = 2000.0f;
 
-    // MacroObjectLike @ FAPOFX.h:105:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:105:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXEQ_DEFAULT_FREQUENCY_CENTER_3 = 10000.0f;
 
-    // MacroObjectLike @ FAPOFX.h:107:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:107:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXEQ_MIN_GAIN = 0.126f;
 
-    // MacroObjectLike @ FAPOFX.h:108:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:108:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXEQ_MAX_GAIN = 7.94f;
 
-    // MacroObjectLike @ FAPOFX.h:109:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:109:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXEQ_DEFAULT_GAIN = 1.0f;
 
-    // MacroObjectLike @ FAPOFX.h:111:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:111:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXEQ_MIN_BANDWIDTH = 0.1f;
 
-    // MacroObjectLike @ FAPOFX.h:112:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:112:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXEQ_MAX_BANDWIDTH = 2.0f;
 
-    // MacroObjectLike @ FAPOFX.h:113:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:113:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXEQ_DEFAULT_BANDWIDTH = 1.0f;
 
-    // MacroObjectLike @ FAPOFX.h:115:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:115:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const int FAPOFXMASTERINGLIMITER_MIN_RELEASE = 1;
 
-    // MacroObjectLike @ FAPOFX.h:116:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:116:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const int FAPOFXMASTERINGLIMITER_MAX_RELEASE = 20;
 
-    // MacroObjectLike @ FAPOFX.h:117:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:117:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const int FAPOFXMASTERINGLIMITER_DEFAULT_RELEASE = 6;
 
-    // MacroObjectLike @ FAPOFX.h:119:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:119:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const int FAPOFXMASTERINGLIMITER_MIN_LOUDNESS = 1;
 
-    // MacroObjectLike @ FAPOFX.h:120:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:120:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const int FAPOFXMASTERINGLIMITER_MAX_LOUDNESS = 1800;
 
-    // MacroObjectLike @ FAPOFX.h:121:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:121:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const int FAPOFXMASTERINGLIMITER_DEFAULT_LOUDNESS = 1000;
 
-    // MacroObjectLike @ FAPOFX.h:123:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:123:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXREVERB_MIN_DIFFUSION = 0.0f;
 
-    // MacroObjectLike @ FAPOFX.h:124:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:124:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXREVERB_MAX_DIFFUSION = 1.0f;
 
-    // MacroObjectLike @ FAPOFX.h:125:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:125:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXREVERB_DEFAULT_DIFFUSION = 0.9f;
 
-    // MacroObjectLike @ FAPOFX.h:127:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:127:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXREVERB_MIN_ROOMSIZE = 0.0001f;
 
-    // MacroObjectLike @ FAPOFX.h:128:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:128:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXREVERB_MAX_ROOMSIZE = 1.0f;
 
-    // MacroObjectLike @ FAPOFX.h:129:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:129:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXREVERB_DEFAULT_ROOMSIZE = 0.6f;
 
-    // MacroObjectLike @ FAPOFX.h:131:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:131:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXECHO_MIN_WETDRYMIX = 0.0f;
 
-    // MacroObjectLike @ FAPOFX.h:132:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:132:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXECHO_MAX_WETDRYMIX = 1.0f;
 
-    // MacroObjectLike @ FAPOFX.h:133:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:133:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXECHO_DEFAULT_WETDRYMIX = 0.5f;
 
-    // MacroObjectLike @ FAPOFX.h:135:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:135:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXECHO_MIN_FEEDBACK = 0.0f;
 
-    // MacroObjectLike @ FAPOFX.h:136:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:136:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXECHO_MAX_FEEDBACK = 1.0f;
 
-    // MacroObjectLike @ FAPOFX.h:137:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:137:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXECHO_DEFAULT_FEEDBACK = 0.5f;
 
-    // MacroObjectLike @ FAPOFX.h:139:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:139:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXECHO_MIN_DELAY = 1.0f;
 
-    // MacroObjectLike @ FAPOFX.h:140:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:140:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXECHO_MAX_DELAY = 2000.0f;
 
-    // MacroObjectLike @ FAPOFX.h:141:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAPOFX.h)
+    // MacroObjectLike @ FAPOFX.h:141:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAPOFX.h)
     public const float FAPOFXECHO_DEFAULT_DELAY = 500.0f;
 
-    // MacroObjectLike @ FAudioFX.h:133:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:133:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_DEBUG = 1;
 
-    // MacroObjectLike @ FAudioFX.h:135:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:135:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MIN_FRAMERATE = 20000;
 
-    // MacroObjectLike @ FAudioFX.h:136:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:136:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MAX_FRAMERATE = 48000;
 
-    // MacroObjectLike @ FAudioFX.h:138:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:138:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_MIN_WET_DRY_MIX = 0.0f;
 
-    // MacroObjectLike @ FAudioFX.h:139:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:139:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MIN_REFLECTIONS_DELAY = 0;
 
-    // MacroObjectLike @ FAudioFX.h:140:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:140:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MIN_REVERB_DELAY = 0;
 
-    // MacroObjectLike @ FAudioFX.h:141:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:141:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MIN_REAR_DELAY = 0;
 
-    // MacroObjectLike @ FAudioFX.h:142:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:142:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MIN_7POINT1_SIDE_DELAY = 0;
 
-    // MacroObjectLike @ FAudioFX.h:143:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:143:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MIN_7POINT1_REAR_DELAY = 0;
 
-    // MacroObjectLike @ FAudioFX.h:144:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:144:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MIN_POSITION = 0;
 
-    // MacroObjectLike @ FAudioFX.h:145:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:145:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MIN_DIFFUSION = 0;
 
-    // MacroObjectLike @ FAudioFX.h:146:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:146:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MIN_LOW_EQ_GAIN = 0;
 
-    // MacroObjectLike @ FAudioFX.h:147:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:147:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MIN_LOW_EQ_CUTOFF = 0;
 
-    // MacroObjectLike @ FAudioFX.h:148:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:148:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MIN_HIGH_EQ_GAIN = 0;
 
-    // MacroObjectLike @ FAudioFX.h:149:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:149:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MIN_HIGH_EQ_CUTOFF = 0;
 
-    // MacroObjectLike @ FAudioFX.h:150:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:150:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_MIN_ROOM_FILTER_FREQ = 20.0f;
 
-    // MacroObjectLike @ FAudioFX.h:151:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:151:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_MIN_ROOM_FILTER_MAIN = -100.0f;
 
-    // MacroObjectLike @ FAudioFX.h:152:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:152:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_MIN_ROOM_FILTER_HF = -100.0f;
 
-    // MacroObjectLike @ FAudioFX.h:153:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:153:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_MIN_REFLECTIONS_GAIN = -100.0f;
 
-    // MacroObjectLike @ FAudioFX.h:154:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:154:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_MIN_REVERB_GAIN = -100.0f;
 
-    // MacroObjectLike @ FAudioFX.h:155:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:155:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_MIN_DECAY_TIME = 0.1f;
 
-    // MacroObjectLike @ FAudioFX.h:156:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:156:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_MIN_DENSITY = 0.0f;
 
-    // MacroObjectLike @ FAudioFX.h:157:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:157:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_MIN_ROOM_SIZE = 0.0f;
 
-    // MacroObjectLike @ FAudioFX.h:159:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:159:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_MAX_WET_DRY_MIX = 100.0f;
 
-    // MacroObjectLike @ FAudioFX.h:160:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:160:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MAX_REFLECTIONS_DELAY = 300;
 
-    // MacroObjectLike @ FAudioFX.h:161:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:161:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MAX_REVERB_DELAY = 85;
 
-    // MacroObjectLike @ FAudioFX.h:162:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:162:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MAX_REAR_DELAY = 5;
 
-    // MacroObjectLike @ FAudioFX.h:163:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:163:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MAX_7POINT1_SIDE_DELAY = 5;
 
-    // MacroObjectLike @ FAudioFX.h:164:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:164:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MAX_7POINT1_REAR_DELAY = 20;
 
-    // MacroObjectLike @ FAudioFX.h:165:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:165:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MAX_POSITION = 30;
 
-    // MacroObjectLike @ FAudioFX.h:166:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:166:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MAX_DIFFUSION = 15;
 
-    // MacroObjectLike @ FAudioFX.h:167:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:167:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MAX_LOW_EQ_GAIN = 12;
 
-    // MacroObjectLike @ FAudioFX.h:168:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:168:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MAX_LOW_EQ_CUTOFF = 9;
 
-    // MacroObjectLike @ FAudioFX.h:169:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:169:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MAX_HIGH_EQ_GAIN = 8;
 
-    // MacroObjectLike @ FAudioFX.h:170:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:170:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_MAX_HIGH_EQ_CUTOFF = 14;
 
-    // MacroObjectLike @ FAudioFX.h:171:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:171:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_MAX_ROOM_FILTER_FREQ = 20000.0f;
 
-    // MacroObjectLike @ FAudioFX.h:172:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:172:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_MAX_ROOM_FILTER_MAIN = 0.0f;
 
-    // MacroObjectLike @ FAudioFX.h:173:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:173:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_MAX_ROOM_FILTER_HF = 0.0f;
 
-    // MacroObjectLike @ FAudioFX.h:174:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:174:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_MAX_REFLECTIONS_GAIN = 20.0f;
 
-    // MacroObjectLike @ FAudioFX.h:175:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:175:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_MAX_REVERB_GAIN = 20.0f;
 
-    // MacroObjectLike @ FAudioFX.h:176:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:176:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_MAX_DENSITY = 100.0f;
 
-    // MacroObjectLike @ FAudioFX.h:177:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:177:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_MAX_ROOM_SIZE = 100.0f;
 
-    // MacroObjectLike @ FAudioFX.h:179:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:179:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_DEFAULT_WET_DRY_MIX = 100.0f;
 
-    // MacroObjectLike @ FAudioFX.h:180:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:180:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_DEFAULT_REFLECTIONS_DELAY = 5;
 
-    // MacroObjectLike @ FAudioFX.h:181:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:181:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_DEFAULT_REVERB_DELAY = 5;
 
-    // MacroObjectLike @ FAudioFX.h:182:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:182:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_DEFAULT_REAR_DELAY = 5;
 
-    // MacroObjectLike @ FAudioFX.h:183:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:183:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_DEFAULT_7POINT1_SIDE_DELAY = 5;
 
-    // MacroObjectLike @ FAudioFX.h:184:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:184:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_DEFAULT_7POINT1_REAR_DELAY = 20;
 
-    // MacroObjectLike @ FAudioFX.h:185:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:185:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_DEFAULT_POSITION = 6;
 
-    // MacroObjectLike @ FAudioFX.h:186:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:186:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_DEFAULT_POSITION_MATRIX = 27;
 
-    // MacroObjectLike @ FAudioFX.h:187:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:187:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_DEFAULT_EARLY_DIFFUSION = 8;
 
-    // MacroObjectLike @ FAudioFX.h:188:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:188:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_DEFAULT_LATE_DIFFUSION = 8;
 
-    // MacroObjectLike @ FAudioFX.h:189:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:189:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_DEFAULT_LOW_EQ_GAIN = 8;
 
-    // MacroObjectLike @ FAudioFX.h:190:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:190:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_DEFAULT_LOW_EQ_CUTOFF = 4;
 
-    // MacroObjectLike @ FAudioFX.h:191:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:191:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_DEFAULT_HIGH_EQ_GAIN = 8;
 
-    // MacroObjectLike @ FAudioFX.h:192:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:192:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const int FAUDIOFX_REVERB_DEFAULT_HIGH_EQ_CUTOFF = 4;
 
-    // MacroObjectLike @ FAudioFX.h:193:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:193:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_DEFAULT_ROOM_FILTER_FREQ = 5000.0f;
 
-    // MacroObjectLike @ FAudioFX.h:194:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:194:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_DEFAULT_ROOM_FILTER_MAIN = 0.0f;
 
-    // MacroObjectLike @ FAudioFX.h:195:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:195:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_DEFAULT_ROOM_FILTER_HF = 0.0f;
 
-    // MacroObjectLike @ FAudioFX.h:196:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:196:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_DEFAULT_REFLECTIONS_GAIN = 0.0f;
 
-    // MacroObjectLike @ FAudioFX.h:197:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:197:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_DEFAULT_REVERB_GAIN = 0.0f;
 
-    // MacroObjectLike @ FAudioFX.h:198:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:198:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_DEFAULT_DECAY_TIME = 1.0f;
 
-    // MacroObjectLike @ FAudioFX.h:199:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:199:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_DEFAULT_DENSITY = 100.0f;
 
-    // MacroObjectLike @ FAudioFX.h:200:9 (/Users/lstranks/Programming/katabasis/ext/FAudio-cs/ext/FAudio/include/FAudioFX.h)
+    // MacroObjectLike @ FAudioFX.h:200:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudioFX.h)
     public const float FAUDIOFX_REVERB_DEFAULT_ROOM_SIZE = 100.0f;
 }
