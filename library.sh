@@ -133,7 +133,7 @@ function build_sdl() {
 
     if [ ! -f "$SDL_LIBRARY_FILE_PATH" ]; then
         SDL_BUILD_DIR="$DIR/cmake-build-release-sdl"
-        cmake $CMAKE_TOOLCHAIN_ARGS -S $DIR/SDL -B $SDL_BUILD_DIR -DSDL_STATIC=OFF -DSDL_TEST=OFF
+        cmake $CMAKE_TOOLCHAIN_ARGS -S $DIR/SDL -B $SDL_BUILD_DIR $CMAKE_ARCH_ARGS -DSDL_STATIC=OFF -DSDL_TEST=OFF
         cmake --build $SDL_BUILD_DIR --config Release
 
         if [[ "$TARGET_BUILD_OS" == "linux" ]]; then
@@ -164,7 +164,7 @@ function build_faudio() {
     echo "Building FAudio..."
     FAUDIO_BUILD_DIR="$DIR/cmake-build-release-faudio"
     cmake $CMAKE_TOOLCHAIN_ARGS -S $DIR/ext/FAudio -B $FAUDIO_BUILD_DIR $CMAKE_ARCH_ARGS -DSDL2_INCLUDE_DIRS="$SDL_INCLUDE_DIRECTORY_PATH" -DSDL2_LIBRARIES="$SDL_LIBRARY_FILE_PATH"
-    cmake --build $FAUDIO_BUILD_DIR --config Release $CMAKE_ARCH_ARGS
+    cmake --build $FAUDIO_BUILD_DIR --config Release
 
     if [[ "$TARGET_BUILD_OS" == "linux" ]]; then
         FAUDIO_LIBRARY_FILENAME="libFAudio.so"
