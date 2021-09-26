@@ -142,7 +142,8 @@ function build_sdl() {
         fi
 
         if [[ "$TARGET_BUILD_OS" == "apple" ]]; then
-            install_name_tool -delete_rpath "$LIB_DIR" "$FNA3D_LIBRARY_FILE_PATH_BUILD"
+            install_name_tool -delete_rpath "$(dirname $SDL_LIBRARY_FILE_PATH)" "$FNA3D_LIBRARY_FILE_PATH_BUILD"
+            install_name_tool -change @rpath/libSDL2-2.0.dylib @executable_path/libSDL2.dylib $FNA3D_LIBRARY_FILE_PATH_BUILD
         fi
 
         mv "$SDL_LIBRARY_FILE_PATH_BUILD" "$SDL_LIBRARY_FILE_PATH"
