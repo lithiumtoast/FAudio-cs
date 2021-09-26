@@ -61,21 +61,24 @@ function set_target_build_arch {
 set_target_build_os
 set_target_build_arch
 
-if [[ "$TARGET_BUILD_OS" == "microsoft" ]]; then
-    CMAKE_TOOLCHAIN_ARGS="-DCMAKE_TOOLCHAIN_FILE=$DIR/mingw-w64-x86_64.cmake"
-elif [[ "$TARGET_BUILD_OS" == "linux" ]]; then
-    CMAKE_TOOLCHAIN_ARGS=""
-elif [[ "$TARGET_BUILD_OS" == "apple" ]]; then
-    CMAKE_TOOLCHAIN_ARGS=""
-else
+if [[ "$TARGET_BUILD_OS" != "microsoft" && "$TARGET_BUILD_OS" != "apple" && "$TARGET_BUILD_OS" != "linux" ]]; then
     echo "Unknown target build operating system: $TARGET_BUILD_OS"
     exit 1
 fi
 
 if [[ "$TARGET_BUILD_ARCH" == "x86_64" ]]; then
-    CMAKE_ARCH_ARGS="-A x64"
+    if [[ "$TARGET_BUILD_OS" == "microsoft" ]]; then
+        CMAKE_TOOLCHAIN_ARGS="-DCMAKE_TOOLCHAIN_FILE=$DIR/mingw-w64-x86_64.cmake"
+    elif [[ "$TARGET_BUILD_OS" == "apple" ]]; then
+        CMAKE_ARCH_ARGS="-DCMAKE_OSX_ARCHITECTURES=x86_64"
+    fi
 elif [[ "$TARGET_BUILD_ARCH" == "arm64" ]]; then
-    CMAKE_ARCH_ARGS="-A arm64"
+    if [[ "$TARGET_BUILD_OS" == "microsoft" ]]; then
+        echo "ARM64 not yet supported for Windows."
+        exit 1
+    elif [[ "$TARGET_BUILD_OS" == "apple" ]]; then
+        CMAKE_ARCH_ARGS="-DCMAKE_OSX_ARCHITECTURES=arm64"
+    fi
 else
     echo "Unknown target build CPU architecture: $TARGET_BUILD_ARCH"
     exit 1
@@ -160,7 +163,7 @@ function build_sdl() {
 function build_faudio() {
     echo "Building FAudio..."
     FAUDIO_BUILD_DIR="$DIR/cmake-build-release-faudio"
-    cmake $CMAKE_TOOLCHAIN_ARGS -S $DIR/ext/FAudio -B $FAUDIO_BUILD_DIR -DSDL2_INCLUDE_DIRS="$SDL_INCLUDE_DIRECTORY_PATH" -DSDL2_LIBRARIES="$SDL_LIBRARY_FILE_PATH"
+    cmake $CMAKE_TOOLCHAIN_ARGS -S $DIR/ext/FAudio -B $FAUDIO_BUILD_DIR $CMAKE_ARCH_ARGS -DSDL2_INCLUDE_DIRS="$SDL_INCLUDE_DIRECTORY_PATH" -DSDL2_LIBRARIES="$SDL_LIBRARY_FILE_PATH"
     cmake --build $FAUDIO_BUILD_DIR --config Release $CMAKE_ARCH_ARGS
 
     if [[ "$TARGET_BUILD_OS" == "linux" ]]; then
