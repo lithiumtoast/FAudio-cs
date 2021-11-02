@@ -2699,7 +2699,7 @@ public static unsafe partial class _FAudio
     public const int FAUDIO_MAJOR_VERSION = 21;
 
     // MacroObjectLike @ FAudio.h:488:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
-    public const int FAUDIO_MINOR_VERSION = 10;
+    public const int FAUDIO_MINOR_VERSION = 11;
 
     // MacroObjectLike @ FAudio.h:489:9 (/home/runner/work/FAudio-cs/FAudio-cs/ext/FAudio/include/FAudio.h)
     public const int FAUDIO_PATCH_VERSION = 0;
