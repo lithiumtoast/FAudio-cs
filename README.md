@@ -7,19 +7,17 @@ Automatically updated C# bindings for https://github.com/FNA-XNA/FAudio with nat
 ### From source
 
 1. Download and install [.NET 6](https://dotnet.microsoft.com/download).
-2. Fork the repository using GitHub or clone the repository manually with submodules: `git clone --recurse-submodules git@github.com:lithiumtoast/FAudio-cs.git`.
-3. Build the native library by running `./library.sh` on macOS or Linux and `.\library.sh` on Windows.
-4. Add the C# project `./src/cs/production/FAudio-cs/FAudio-cs.csproj` to your solution:
+2. Fork the repository using GitHub or clone the repository manually with submodules: `git clone --recurse-submodules https://github.com/bottlenoselabs/FAudio-cs`.
+3. Build the native library by running `library.sh`. To execute `.sh` scripts on Windows, use Git Bash which can be installed with Git itself: https://git-scm.com/download/win. The `library.sh` script requires that CMake is installed and in your path.
+4. Import the MSBuild `FAudio.props` file which is located in the root of this directory to your `.csproj` file to setup everything you need.
 ```xml
-<ItemGroup>
-    <ProjectReference Include="path/to/FAudio-cs/src/cs/production/FAudio-cs/FAudio-cs.csproj" />
-</ItemGroup>
+<!-- FAudio: bindings + native library -->
+<Import Project="$([System.IO.Path]::GetFullPath('path/to/FAudio.props'))" />
 ```
-5. Use https://github.com/lithiumtoast/sdl-cs since FAudio has native runtime dependency on SDL2 (there is no C# code dependency, it's a C dependency). 
 
 #### Bindgen
 
-If you wish to re-generate the bindings, simple run `./bindgen.sh` on macOS or Linux and `.\bindgen.cmd` on Windows.
+If you wish to re-generate the bindings, run [`c2cs`](https://github.com/lithiumtoast/c2cs) from this directory.
 
 ## Developers: Documentation
 
