@@ -7,8 +7,12 @@
 using System;
 using System.Runtime.InteropServices;
 using System.Text;
+using static bottlenoselabs.FAudio;
+using static bottlenoselabs.FAudio.Runtime;
 
-public static unsafe partial class _FAudio
+namespace bottlenoselabs;
+
+public static unsafe partial class FAudio
 {
 	[StructLayout(LayoutKind.Sequential, Pack = 1)]
 	public struct FACTNotification_FNA
@@ -147,13 +151,13 @@ public static unsafe partial class _FAudio
 
     public const byte FACT_FLAG_NOTIFICATION_PERSIST = 0x01;
     
-    [DllImport(_FAudio.LibraryName, CallingConvention = CallingConvention.Cdecl)]
+    [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
 	public static extern void XNA_SongInit();
 
-	[DllImport(_FAudio.LibraryName, CallingConvention = CallingConvention.Cdecl)]
+	[DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
 	public static extern void XNA_SongQuit();
 
-	[DllImport(_FAudio.LibraryName, CallingConvention = CallingConvention.Cdecl)]
+	[DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
 	private static extern unsafe float XNA_PlaySong(byte* name);
 	public static unsafe float XNA_PlaySong(string name)
 	{
@@ -162,28 +166,28 @@ public static unsafe partial class _FAudio
 		return XNA_PlaySong(Utf8Encode(name, utf8Buf, utf8BufSize));
 	}
 
-	[DllImport(_FAudio.LibraryName, CallingConvention = CallingConvention.Cdecl)]
+	[DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
 	public static extern void XNA_PauseSong();
 
-	[DllImport(_FAudio.LibraryName, CallingConvention = CallingConvention.Cdecl)]
+	[DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
 	public static extern void XNA_ResumeSong();
 
-	[DllImport(_FAudio.LibraryName, CallingConvention = CallingConvention.Cdecl)]
+	[DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
 	public static extern void XNA_StopSong();
 
-	[DllImport(_FAudio.LibraryName, CallingConvention = CallingConvention.Cdecl)]
+	[DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
 	public static extern void XNA_SetSongVolume(float volume);
 
-	[DllImport(_FAudio.LibraryName, CallingConvention = CallingConvention.Cdecl)]
+	[DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
 	public static extern uint XNA_GetSongEnded();
 
-	[DllImport(_FAudio.LibraryName, CallingConvention = CallingConvention.Cdecl)]
+	[DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
 	public static extern void XNA_EnableVisualization(uint enable);
 
-	[DllImport(_FAudio.LibraryName, CallingConvention = CallingConvention.Cdecl)]
+	[DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
 	public static extern uint XNA_VisualizationEnabled();
 
-	[DllImport(_FAudio.LibraryName, CallingConvention = CallingConvention.Cdecl)]
+	[DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
 	public static extern void XNA_GetSongVisualizationData(
 		float[] frequencies,
 		float[] samples,

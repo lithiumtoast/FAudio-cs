@@ -1,0 +1,15 @@
+{
+    "inputFilePath": "src/c/FAudio/FAudio_bindgen.h",
+    "outputFilePath": "src/cs/production/FAudio/FAudio.cs",
+    "includeDirectories": [
+        "ext/FAudio/include"
+    ],
+    "namespaceName": "bottlenoselabs",
+    "machineBitWidth": 64,
+    "mappedTypeNames": [
+        {
+            "source": "FAudio",
+            "target": "FAudioSystem"
+        }
+    ]
+  }

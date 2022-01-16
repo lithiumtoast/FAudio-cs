@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Production", "Production", "{39423871-7923-4AFB-A756-35E17FCBA274}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAudio-cs", "src\cs\production\FAudio-cs\FAudio-cs.csproj", "{5745C505-C83D-4C89-A2D1-CCFDB9D602C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAudio", "src\cs\production\FAudio\FAudio.csproj", "{5745C505-C83D-4C89-A2D1-CCFDB9D602C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
