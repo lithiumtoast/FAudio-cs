@@ -2698,10 +2698,10 @@ namespace bottlenoselabs
         public const int FAUDIO_ABI_VERSION = 0;
 
         // MacroDefinition @ FAudio.h:487:9
-        public const int FAUDIO_MAJOR_VERSION = 21;
+        public const int FAUDIO_MAJOR_VERSION = 22;
 
         // MacroDefinition @ FAudio.h:488:9
-        public const int FAUDIO_MINOR_VERSION = 11;
+        public const int FAUDIO_MINOR_VERSION = 1;
 
         // MacroDefinition @ FAudio.h:489:9
         public const int FAUDIO_PATCH_VERSION = 0;
