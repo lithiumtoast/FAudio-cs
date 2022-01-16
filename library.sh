@@ -178,7 +178,10 @@ function build_fna3d() {
         -DCMAKE_ARCHIVE_OUTPUT_DIRECTORY=$FNA3D_BUILD_DIR -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=$FNA3D_BUILD_DIR -DCMAKE_RUNTIME_OUTPUT_DIRECTORY=$FNA3D_BUILD_DIR -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE=$FNA3D_BUILD_DIR \
         `# project specific` \
         -DSDL2_INCLUDE_DIRS="$SDL_INCLUDE_DIRECTORY_PATH" -DSDL2_LIBRARIES="$SDL_LIBRARY_FILE_PATH"
+    exit_if_last_command_failed
+    
     cmake --build $FNA3D_BUILD_DIR --config Release
+    exit_if_last_command_failed
 
     if [[ "$TARGET_BUILD_OS" == "linux" ]]; then
         FNA3D_LIBRARY_FILENAME="libFNA3D.so"
