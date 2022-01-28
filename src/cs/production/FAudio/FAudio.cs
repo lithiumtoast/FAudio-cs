@@ -795,7 +795,7 @@ namespace bottlenoselabs
 
         // FunctionPointer @ FAPOBase.h:110:18
         [StructLayout(LayoutKind.Sequential)]
-        public struct FnPtr_FAUDIO_VoidPtr_Void
+        public struct FnPtr_VoidPtr_Void
         {
             public delegate* unmanaged<void*, void> Pointer;
         }
@@ -1646,7 +1646,7 @@ namespace bottlenoselabs
             public FAPO @base;
 
             [FieldOffset(112)] // size = 8, padding = 0
-            public FnPtr_FAUDIO_VoidPtr_Void Destructor;
+            public FnPtr_VoidPtr_Void Destructor;
 
             [FieldOffset(120)] // size = 8, padding = 0
             public OnSetParametersFunc OnSetParameters;
