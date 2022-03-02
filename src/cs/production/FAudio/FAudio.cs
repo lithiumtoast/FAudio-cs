@@ -25,639 +25,639 @@ namespace bottlenoselabs
         private const string LibraryName = "FAudio";
 
         // Function @ F3DAudio.h:236:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void F3DAudioInitialize(uint SpeakerChannelMask, float SpeedOfSound, F3DAUDIO_HANDLE Instance);
 
         // Function @ F3DAudio.h:242:22
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint F3DAudioInitialize8(uint SpeakerChannelMask, float SpeedOfSound, F3DAUDIO_HANDLE Instance);
 
         // Function @ F3DAudio.h:248:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void F3DAudioCalculate(F3DAUDIO_HANDLE Instance, F3DAUDIO_LISTENER* pListener, F3DAUDIO_EMITTER* pEmitter, uint Flags, F3DAUDIO_DSP_SETTINGS* pDSPSettings);
 
         // Function @ FAudio.h:498:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioLinkedVersion();
 
         // Function @ FAudio.h:510:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioCreate(FAudioSystem** ppFAudio, uint Flags, FAudioProcessor XAudio2Processor);
 
         // Function @ FAudio.h:517:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioCOMConstructEXT(FAudioSystem** ppFAudio, byte version);
 
         // Function @ FAudio.h:522:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudio_AddRef(FAudioSystem* audio);
 
         // Function @ FAudio.h:527:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudio_Release(FAudioSystem* audio);
 
         // Function @ FAudio.h:535:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudio_GetDeviceCount(FAudioSystem* audio, uint* pCount);
 
         // Function @ FAudio.h:544:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudio_GetDeviceDetails(FAudioSystem* audio, uint Index, FAudioDeviceDetails* pDeviceDetails);
 
         // Function @ FAudio.h:553:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudio_Initialize(FAudioSystem* audio, uint Flags, FAudioProcessor XAudio2Processor);
 
         // Function @ FAudio.h:567:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudio_RegisterForCallbacks(FAudioSystem* audio, FAudioEngineCallback* pCallback);
 
         // Function @ FAudio.h:579:16
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAudio_UnregisterForCallbacks(FAudioSystem* audio, FAudioEngineCallback* pCallback);
 
         // Function @ FAudio.h:608:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudio_CreateSourceVoice(FAudioSystem* audio, FAudioSourceVoice** ppSourceVoice, FAudioWaveFormatEx* pSourceFormat, uint Flags, float MaxFrequencyRatio, FAudioVoiceCallback* pCallback, FAudioVoiceSends* pSendList, FAudioEffectChain* pEffectChain);
 
         // Function @ FAudio.h:637:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudio_CreateSubmixVoice(FAudioSystem* audio, FAudioSubmixVoice** ppSubmixVoice, uint InputChannels, uint InputSampleRate, uint Flags, uint ProcessingStage, FAudioVoiceSends* pSendList, FAudioEffectChain* pEffectChain);
 
         // Function @ FAudio.h:660:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudio_CreateMasteringVoice(FAudioSystem* audio, FAudioMasteringVoice** ppMasteringVoice, uint InputChannels, uint InputSampleRate, uint Flags, uint DeviceIndex, FAudioEffectChain* pEffectChain);
 
         // Function @ FAudio.h:673:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudio_CreateMasteringVoice8(FAudioSystem* audio, FAudioMasteringVoice** ppMasteringVoice, uint InputChannels, uint InputSampleRate, uint Flags, ushort* szDeviceId, FAudioEffectChain* pEffectChain, FAudioStreamCategory StreamCategory);
 
         // Function @ FAudio.h:687:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudio_StartEngine(FAudioSystem* audio);
 
         // Function @ FAudio.h:694:16
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAudio_StopEngine(FAudioSystem* audio);
 
         // Function @ FAudio.h:707:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudio_CommitOperationSet(FAudioSystem* audio, uint OperationSet);
 
         // Function @ FAudio.h:714:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudio_CommitChanges(FAudioSystem* audio);
 
         // Function @ FAudio.h:720:16
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAudio_GetPerformanceData(FAudioSystem* audio, FAudioPerformanceData* pPerfData);
 
         // Function @ FAudio.h:731:16
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAudio_SetDebugConfiguration(FAudioSystem* audio, FAudioDebugConfiguration* pDebugConfiguration, void* pReserved);
 
         // Function @ FAudio.h:745:16
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAudio_GetProcessingQuantum(FAudioSystem* audio, uint* quantumNumerator, uint* quantumDenominator);
 
         // Function @ FAudio.h:757:16
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAudioVoice_GetVoiceDetails(FAudioVoice* voice, FAudioVoiceDetails* pVoiceDetails);
 
         // Function @ FAudio.h:770:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioVoice_SetOutputVoices(FAudioVoice* voice, FAudioVoiceSends* pSendList);
 
         // Function @ FAudio.h:784:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioVoice_SetEffectChain(FAudioVoice* voice, FAudioEffectChain* pEffectChain);
 
         // Function @ FAudio.h:796:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioVoice_EnableEffect(FAudioVoice* voice, uint EffectIndex, uint OperationSet);
 
         // Function @ FAudio.h:809:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioVoice_DisableEffect(FAudioVoice* voice, uint EffectIndex, uint OperationSet);
 
         // Function @ FAudio.h:822:16
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAudioVoice_GetEffectState(FAudioVoice* voice, uint EffectIndex, int* pEnabled);
 
         // Function @ FAudio.h:837:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioVoice_SetEffectParameters(FAudioVoice* voice, uint EffectIndex, void* pParameters, uint ParametersByteSize, uint OperationSet);
 
         // Function @ FAudio.h:853:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioVoice_GetEffectParameters(FAudioVoice* voice, uint EffectIndex, void* pParameters, uint ParametersByteSize);
 
         // Function @ FAudio.h:868:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioVoice_SetFilterParameters(FAudioVoice* voice, FAudioFilterParameters* pParameters, uint OperationSet);
 
         // Function @ FAudio.h:879:16
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAudioVoice_GetFilterParameters(FAudioVoice* voice, FAudioFilterParameters* pParameters);
 
         // Function @ FAudio.h:893:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioVoice_SetOutputFilterParameters(FAudioVoice* voice, FAudioVoice* pDestinationVoice, FAudioFilterParameters* pParameters, uint OperationSet);
 
         // Function @ FAudio.h:906:16
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAudioVoice_GetOutputFilterParameters(FAudioVoice* voice, FAudioVoice* pDestinationVoice, FAudioFilterParameters* pParameters);
 
         // Function @ FAudio.h:921:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioVoice_SetVolume(FAudioVoice* voice, float Volume, uint OperationSet);
 
         // Function @ FAudio.h:931:16
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAudioVoice_GetVolume(FAudioVoice* voice, float* pVolume);
 
         // Function @ FAudio.h:944:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioVoice_SetChannelVolumes(FAudioVoice* voice, uint Channels, float* pVolumes, uint OperationSet);
 
         // Function @ FAudio.h:956:16
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAudioVoice_GetChannelVolumes(FAudioVoice* voice, uint Channels, float* pVolumes);
 
         // Function @ FAudio.h:979:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioVoice_SetOutputMatrix(FAudioVoice* voice, FAudioVoice* pDestinationVoice, uint SourceChannels, uint DestinationChannels, float* pLevelMatrix, uint OperationSet);
 
         // Function @ FAudio.h:995:16
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAudioVoice_GetOutputMatrix(FAudioVoice* voice, FAudioVoice* pDestinationVoice, uint SourceChannels, uint DestinationChannels, float* pLevelMatrix);
 
         // Function @ FAudio.h:1004:16
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAudioVoice_DestroyVoice(FAudioVoice* voice);
 
         // Function @ FAudio.h:1015:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioSourceVoice_Start(FAudioSourceVoice* voice, uint Flags, uint OperationSet);
 
         // Function @ FAudio.h:1030:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioSourceVoice_Stop(FAudioSourceVoice* voice, uint Flags, uint OperationSet);
 
         // Function @ FAudio.h:1043:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioSourceVoice_SubmitSourceBuffer(FAudioSourceVoice* voice, FAudioBuffer* pBuffer, FAudioBufferWMA* pBufferWMA);
 
         // Function @ FAudio.h:1055:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioSourceVoice_FlushSourceBuffers(FAudioSourceVoice* voice);
 
         // Function @ FAudio.h:1063:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioSourceVoice_Discontinuity(FAudioSourceVoice* voice);
 
         // Function @ FAudio.h:1073:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioSourceVoice_ExitLoop(FAudioSourceVoice* voice, uint OperationSet);
 
         // Function @ FAudio.h:1083:16
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAudioSourceVoice_GetState(FAudioSourceVoice* voice, FAudioVoiceState* pVoiceState, uint Flags);
 
         // Function @ FAudio.h:1096:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioSourceVoice_SetFrequencyRatio(FAudioSourceVoice* voice, float Ratio, uint OperationSet);
 
         // Function @ FAudio.h:1106:16
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAudioSourceVoice_GetFrequencyRatio(FAudioSourceVoice* voice, float* pRatio);
 
         // Function @ FAudio.h:1122:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioSourceVoice_SetSourceSampleRate(FAudioSourceVoice* voice, uint NewSourceSampleRate);
 
         // Function @ FAudio.h:1137:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioMasteringVoice_GetChannelMask(FAudioMasteringVoice* voice, uint* pChannelMask);
 
         // Function @ FAudio.h:1251:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioCreateWithCustomAllocatorEXT(FAudioSystem** ppFAudio, uint Flags, FAudioProcessor XAudio2Processor, FAudioMallocFunc customMalloc, FAudioFreeFunc customFree, FAudioReallocFunc customRealloc);
 
         // Function @ FAudio.h:1259:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioCOMConstructWithCustomAllocatorEXT(FAudioSystem** ppFAudio, byte version, FAudioMallocFunc customMalloc, FAudioFreeFunc customFree, FAudioReallocFunc customRealloc);
 
         // Function @ FAudio.h:1273:16
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAudio_SetEngineProcedureEXT(FAudioSystem* audio, FAudioEngineProcedureEXT clientEngineProc, void* user);
 
         // Function @ FAudio.h:1311:27
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern FAudioIOStream* FAudio_fopen(CString path);
 
         // Function @ FAudio.h:1312:27
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern FAudioIOStream* FAudio_memopen(void* mem, int len);
 
         // Function @ FAudio.h:1313:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern byte* FAudio_memptr(FAudioIOStream* io, ulong offset);
 
         // Function @ FAudio.h:1314:16
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAudio_close(FAudioIOStream* io);
 
         // Function @ FACT.h:462:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTCreateEngine(uint dwCreationFlags, FACTAudioEngine** ppEngine);
 
         // Function @ FACT.h:468:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTCreateEngineWithCustomAllocatorEXT(uint dwCreationFlags, FACTAudioEngine** ppEngine, FAudioMallocFunc customMalloc, FAudioFreeFunc customFree, FAudioReallocFunc customRealloc);
 
         // Function @ FACT.h:476:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_AddRef(FACTAudioEngine* pEngine);
 
         // Function @ FACT.h:478:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_Release(FACTAudioEngine* pEngine);
 
         // Function @ FACT.h:482:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_GetRendererCount(FACTAudioEngine* pEngine, ushort* pnRendererCount);
 
         // Function @ FACT.h:487:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_GetRendererDetails(FACTAudioEngine* pEngine, ushort nRendererIndex, FACTRendererDetails* pRendererDetails);
 
         // Function @ FACT.h:493:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_GetFinalMixFormat(FACTAudioEngine* pEngine, FAudioWaveFormatExtensible* pFinalMixFormat);
 
         // Function @ FACT.h:498:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_Initialize(FACTAudioEngine* pEngine, FACTRuntimeParameters* pParams);
 
         // Function @ FACT.h:503:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_ShutDown(FACTAudioEngine* pEngine);
 
         // Function @ FACT.h:505:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_DoWork(FACTAudioEngine* pEngine);
 
         // Function @ FACT.h:507:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_CreateSoundBank(FACTAudioEngine* pEngine, void* pvBuffer, uint dwSize, uint dwFlags, uint dwAllocAttributes, FACTSoundBank** ppSoundBank);
 
         // Function @ FACT.h:516:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_CreateInMemoryWaveBank(FACTAudioEngine* pEngine, void* pvBuffer, uint dwSize, uint dwFlags, uint dwAllocAttributes, FACTWaveBank** ppWaveBank);
 
         // Function @ FACT.h:525:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_CreateStreamingWaveBank(FACTAudioEngine* pEngine, FACTStreamingParameters* pParms, FACTWaveBank** ppWaveBank);
 
         // Function @ FACT.h:531:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_PrepareWave(FACTAudioEngine* pEngine, uint dwFlags, CString szWavePath, uint wStreamingPacketSize, uint dwAlignment, uint dwPlayOffset, byte nLoopCount, FACTWave** ppWave);
 
         // Function @ FACT.h:542:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_PrepareInMemoryWave(FACTAudioEngine* pEngine, uint dwFlags, FACTWaveBankEntry entry, uint* pdwSeekTable, byte* pbWaveData, uint dwPlayOffset, byte nLoopCount, FACTWave** ppWave);
 
         // Function @ FACT.h:553:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_PrepareStreamingWave(FACTAudioEngine* pEngine, uint dwFlags, FACTWaveBankEntry entry, FACTStreamingParameters streamingParams, uint dwAlignment, uint* pdwSeekTable, byte* pbWaveData, uint dwPlayOffset, byte nLoopCount, FACTWave** ppWave);
 
         // Function @ FACT.h:566:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_RegisterNotification(FACTAudioEngine* pEngine, FACTNotificationDescription* pNotificationDescription);
 
         // Function @ FACT.h:571:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_UnRegisterNotification(FACTAudioEngine* pEngine, FACTNotificationDescription* pNotificationDescription);
 
         // Function @ FACT.h:576:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ushort FACTAudioEngine_GetCategory(FACTAudioEngine* pEngine, CString szFriendlyName);
 
         // Function @ FACT.h:581:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_Stop(FACTAudioEngine* pEngine, ushort nCategory, uint dwFlags);
 
         // Function @ FACT.h:587:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_SetVolume(FACTAudioEngine* pEngine, ushort nCategory, float volume);
 
         // Function @ FACT.h:593:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_Pause(FACTAudioEngine* pEngine, ushort nCategory, int fPause);
 
         // Function @ FACT.h:599:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ushort FACTAudioEngine_GetGlobalVariableIndex(FACTAudioEngine* pEngine, CString szFriendlyName);
 
         // Function @ FACT.h:604:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_SetGlobalVariable(FACTAudioEngine* pEngine, ushort nIndex, float nValue);
 
         // Function @ FACT.h:610:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTAudioEngine_GetGlobalVariable(FACTAudioEngine* pEngine, ushort nIndex, float* pnValue);
 
         // Function @ FACT.h:618:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ushort FACTSoundBank_GetCueIndex(FACTSoundBank* pSoundBank, CString szFriendlyName);
 
         // Function @ FACT.h:623:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTSoundBank_GetNumCues(FACTSoundBank* pSoundBank, ushort* pnNumCues);
 
         // Function @ FACT.h:628:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTSoundBank_GetCueProperties(FACTSoundBank* pSoundBank, ushort nCueIndex, FACTCueProperties* pProperties);
 
         // Function @ FACT.h:634:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTSoundBank_Prepare(FACTSoundBank* pSoundBank, ushort nCueIndex, uint dwFlags, int timeOffset, FACTCue** ppCue);
 
         // Function @ FACT.h:642:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTSoundBank_Play(FACTSoundBank* pSoundBank, ushort nCueIndex, uint dwFlags, int timeOffset, FACTCue** ppCue);
 
         // Function @ FACT.h:655:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTSoundBank_Play3D(FACTSoundBank* pSoundBank, ushort nCueIndex, uint dwFlags, int timeOffset, F3DAUDIO_DSP_SETTINGS* pDSPSettings, FACTCue** ppCue);
 
         // Function @ FACT.h:664:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTSoundBank_Stop(FACTSoundBank* pSoundBank, ushort nCueIndex, uint dwFlags);
 
         // Function @ FACT.h:670:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTSoundBank_Destroy(FACTSoundBank* pSoundBank);
 
         // Function @ FACT.h:672:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTSoundBank_GetState(FACTSoundBank* pSoundBank, uint* pdwState);
 
         // Function @ FACT.h:679:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTWaveBank_Destroy(FACTWaveBank* pWaveBank);
 
         // Function @ FACT.h:681:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTWaveBank_GetState(FACTWaveBank* pWaveBank, uint* pdwState);
 
         // Function @ FACT.h:686:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTWaveBank_GetNumWaves(FACTWaveBank* pWaveBank, ushort* pnNumWaves);
 
         // Function @ FACT.h:691:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ushort FACTWaveBank_GetWaveIndex(FACTWaveBank* pWaveBank, CString szFriendlyName);
 
         // Function @ FACT.h:696:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTWaveBank_GetWaveProperties(FACTWaveBank* pWaveBank, ushort nWaveIndex, FACTWaveProperties* pWaveProperties);
 
         // Function @ FACT.h:702:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTWaveBank_Prepare(FACTWaveBank* pWaveBank, ushort nWaveIndex, uint dwFlags, uint dwPlayOffset, byte nLoopCount, FACTWave** ppWave);
 
         // Function @ FACT.h:711:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTWaveBank_Play(FACTWaveBank* pWaveBank, ushort nWaveIndex, uint dwFlags, uint dwPlayOffset, byte nLoopCount, FACTWave** ppWave);
 
         // Function @ FACT.h:720:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTWaveBank_Stop(FACTWaveBank* pWaveBank, ushort nWaveIndex, uint dwFlags);
 
         // Function @ FACT.h:728:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTWave_Destroy(FACTWave* pWave);
 
         // Function @ FACT.h:730:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTWave_Play(FACTWave* pWave);
 
         // Function @ FACT.h:732:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTWave_Stop(FACTWave* pWave, uint dwFlags);
 
         // Function @ FACT.h:734:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTWave_Pause(FACTWave* pWave, int fPause);
 
         // Function @ FACT.h:736:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTWave_GetState(FACTWave* pWave, uint* pdwState);
 
         // Function @ FACT.h:738:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTWave_SetPitch(FACTWave* pWave, short pitch);
 
         // Function @ FACT.h:740:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTWave_SetVolume(FACTWave* pWave, float volume);
 
         // Function @ FACT.h:742:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTWave_SetMatrixCoefficients(FACTWave* pWave, uint uSrcChannelCount, uint uDstChannelCount, float* pMatrixCoefficients);
 
         // Function @ FACT.h:749:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTWave_GetProperties(FACTWave* pWave, FACTWaveInstanceProperties* pProperties);
 
         // Function @ FACT.h:756:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTCue_Destroy(FACTCue* pCue);
 
         // Function @ FACT.h:758:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTCue_Play(FACTCue* pCue);
 
         // Function @ FACT.h:760:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTCue_Stop(FACTCue* pCue, uint dwFlags);
 
         // Function @ FACT.h:762:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTCue_GetState(FACTCue* pCue, uint* pdwState);
 
         // Function @ FACT.h:764:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTCue_SetMatrixCoefficients(FACTCue* pCue, uint uSrcChannelCount, uint uDstChannelCount, float* pMatrixCoefficients);
 
         // Function @ FACT.h:771:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern ushort FACTCue_GetVariableIndex(FACTCue* pCue, CString szFriendlyName);
 
         // Function @ FACT.h:776:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTCue_SetVariable(FACTCue* pCue, ushort nIndex, float nValue);
 
         // Function @ FACT.h:782:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTCue_GetVariable(FACTCue* pCue, ushort nIndex, float* nValue);
 
         // Function @ FACT.h:788:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTCue_Pause(FACTCue* pCue, int fPause);
 
         // Function @ FACT.h:790:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTCue_GetProperties(FACTCue* pCue, FACTCueInstanceProperties** ppProperties);
 
         // Function @ FACT.h:795:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTCue_SetOutputVoices(FACTCue* pCue, FAudioVoiceSends* pSendList);
 
         // Function @ FACT.h:800:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACTCue_SetOutputVoiceMatrix(FACTCue* pCue, FAudioVoice* pDestinationVoice, uint SourceChannels, uint DestinationChannels, float* pLevelMatrix);
 
         // Function @ FACT3D.h:104:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACT3DInitialize(FACTAudioEngine* pEngine, F3DAUDIO_HANDLE F3DInstance);
 
         // Function @ FACT3D.h:109:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACT3DCalculate(F3DAUDIO_HANDLE F3DInstance, F3DAUDIO_LISTENER* pListener, F3DAUDIO_EMITTER* pEmitter, F3DAUDIO_DSP_SETTINGS* pDSPSettings);
 
         // Function @ FACT3D.h:116:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FACT3DApply(F3DAUDIO_DSP_SETTINGS* pDSPSettings, FACTCue* pCue);
 
         // Function @ FAPOBase.h:140:14
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void CreateFAPOBase(FAPOBase* fapo, FAPORegistrationProperties* pRegistrationProperties, byte* pParameterBlocks, uint uParameterBlockByteSize, byte fProducer);
 
         // Function @ FAPOBase.h:149:14
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void CreateFAPOBaseWithCustomAllocatorEXT(FAPOBase* fapo, FAPORegistrationProperties* pRegistrationProperties, byte* pParameterBlocks, uint uParameterBlockByteSize, byte fProducer, FAudioMallocFunc customMalloc, FAudioFreeFunc customFree, FAudioReallocFunc customRealloc);
 
         // Function @ FAPOBase.h:160:17
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int FAPOBase_AddRef(FAPOBase* fapo);
 
         // Function @ FAPOBase.h:162:17
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern int FAPOBase_Release(FAPOBase* fapo);
 
         // Function @ FAPOBase.h:164:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAPOBase_GetRegistrationProperties(FAPOBase* fapo, FAPORegistrationProperties** ppRegistrationProperties);
 
         // Function @ FAPOBase.h:169:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAPOBase_IsInputFormatSupported(FAPOBase* fapo, FAudioWaveFormatEx* pOutputFormat, FAudioWaveFormatEx* pRequestedInputFormat, FAudioWaveFormatEx** ppSupportedInputFormat);
 
         // Function @ FAPOBase.h:176:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAPOBase_IsOutputFormatSupported(FAPOBase* fapo, FAudioWaveFormatEx* pInputFormat, FAudioWaveFormatEx* pRequestedOutputFormat, FAudioWaveFormatEx** ppSupportedOutputFormat);
 
         // Function @ FAPOBase.h:183:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAPOBase_Initialize(FAPOBase* fapo, void* pData, uint DataByteSize);
 
         // Function @ FAPOBase.h:189:14
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAPOBase_Reset(FAPOBase* fapo);
 
         // Function @ FAPOBase.h:191:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAPOBase_LockForProcess(FAPOBase* fapo, uint InputLockedParameterCount, FAPOLockForProcessBufferParameters* pInputLockedParameters, uint OutputLockedParameterCount, FAPOLockForProcessBufferParameters* pOutputLockedParameters);
 
         // Function @ FAPOBase.h:199:14
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAPOBase_UnlockForProcess(FAPOBase* fapo);
 
         // Function @ FAPOBase.h:201:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAPOBase_CalcInputFrames(FAPOBase* fapo, uint OutputFrameCount);
 
         // Function @ FAPOBase.h:206:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAPOBase_CalcOutputFrames(FAPOBase* fapo, uint InputFrameCount);
 
         // Function @ FAPOBase.h:211:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAPOBase_ValidateFormatDefault(FAPOBase* fapo, FAudioWaveFormatEx* pFormat, byte fOverwrite);
 
         // Function @ FAPOBase.h:217:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAPOBase_ValidateFormatPair(FAPOBase* fapo, FAudioWaveFormatEx* pSupportedFormat, FAudioWaveFormatEx* pRequestedFormat, byte fOverwrite);
 
         // Function @ FAPOBase.h:224:14
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAPOBase_ProcessThru(FAPOBase* fapo, void* pInputBuffer, float* pOutputBuffer, uint FrameCount, ushort InputChannelCount, ushort OutputChannelCount, byte MixWithOutput);
 
         // Function @ FAPOBase.h:234:14
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAPOBase_SetParameters(FAPOBase* fapo, void* pParameters, uint ParameterByteSize);
 
         // Function @ FAPOBase.h:240:14
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAPOBase_GetParameters(FAPOBase* fapo, void* pParameters, uint ParameterByteSize);
 
         // Function @ FAPOBase.h:246:14
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAPOBase_OnSetParameters(FAPOBase* fapo, void* parameters, uint parametersSize);
 
         // Function @ FAPOBase.h:252:17
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern byte FAPOBase_ParametersChanged(FAPOBase* fapo);
 
         // Function @ FAPOBase.h:254:18
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern byte* FAPOBase_BeginProcess(FAPOBase* fapo);
 
         // Function @ FAPOBase.h:256:14
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void FAPOBase_EndProcess(FAPOBase* fapo);
 
         // Function @ FAPOFX.h:154:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAPOFX_CreateFX(FAudioGUID* clsid, FAPO** pEffect, void* pInitData, uint InitDataByteSize);
 
         // Function @ FAPOFX.h:162:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAPOFX_CreateFXWithCustomAllocatorEXT(FAudioGUID* clsid, FAPO** pEffect, void* pInitData, uint InitDataByteSize, FAudioMallocFunc customMalloc, FAudioFreeFunc customFree, FAudioReallocFunc customRealloc);
 
         // Function @ FAudioFX.h:265:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioCreateVolumeMeter(FAPO** ppApo, uint Flags);
 
         // Function @ FAudioFX.h:266:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioCreateReverb(FAPO** ppApo, uint Flags);
 
         // Function @ FAudioFX.h:267:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioCreateReverb9(FAPO** ppApo, uint Flags);
 
         // Function @ FAudioFX.h:270:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioCreateVolumeMeterWithCustomAllocatorEXT(FAPO** ppApo, uint Flags, FAudioMallocFunc customMalloc, FAudioFreeFunc customFree, FAudioReallocFunc customRealloc);
 
         // Function @ FAudioFX.h:277:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioCreateReverbWithCustomAllocatorEXT(FAPO** ppApo, uint Flags, FAudioMallocFunc customMalloc, FAudioFreeFunc customFree, FAudioReallocFunc customRealloc);
 
         // Function @ FAudioFX.h:284:20
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern uint FAudioCreateReverb9WithCustomAllocatorEXT(FAPO** ppApo, uint Flags, FAudioMallocFunc customMalloc, FAudioFreeFunc customFree, FAudioReallocFunc customRealloc);
 
         // Function @ FAudioFX.h:292:16
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void ReverbConvertI3DL2ToNative(FAudioFXReverbI3DL2Parameters* pI3DL2, FAudioFXReverbParameters* pNative);
 
         // Function @ FAudioFX.h:296:16
-        [DllImport(LibraryName)]
+        [DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void ReverbConvertI3DL2ToNative9(FAudioFXReverbI3DL2Parameters* pI3DL2, FAudioFXReverbParameters9* pNative, int sevenDotOneReverb);
 
         // FunctionPointer @ FAudio.h:1247:29
@@ -2701,7 +2701,7 @@ namespace bottlenoselabs
         public const int FAUDIO_MAJOR_VERSION = 22;
 
         // MacroDefinition @ FAudio.h:488:9
-        public const int FAUDIO_MINOR_VERSION = 2;
+        public const int FAUDIO_MINOR_VERSION = 3;
 
         // MacroDefinition @ FAudio.h:489:9
         public const int FAUDIO_PATCH_VERSION = 0;
