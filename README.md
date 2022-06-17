@@ -21,7 +21,7 @@ If you wish to re-generate the bindings, run [`c2cs`](https://github.com/lithium
 
 ## Developers: Documentation
 
-For more information on how C# bindings work, see [`C2CS`](https://github.com/lithiumtoast/c2cs), the tool that generates the bindings for `SDL` and other C libraries.
+For more information on how C# bindings work, see [`C2CS`](https://github.com/lithiumtoast/c2cs), the tool that generates the bindings for `FAudio` and other C libraries.
 
 FNA3D has limited support.
 

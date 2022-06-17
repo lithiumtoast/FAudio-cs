@@ -12,7 +12,7 @@
   <ItemGroup>
     <Compile Include="$(_GitDirectoryPath)/FAudio.cs" >
       <Pack>false</Pack>
-      <Link>$(_LinkDirectoryPath)/FAudio.cs</Link>
+      <Link>$(_GitDirectoryPath)/FAudio.cs</Link>
     </Compile>
     <Compile Include="$(_SourceCodeDirectoryPath)/**/*.cs" >
       <Pack>false</Pack>
