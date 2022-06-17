@@ -2009,6 +2009,7 @@ namespace bottlenoselabs
             [FieldOffset(28)] // size = 8, padding = 0
             public FACTWave* pWave;
         }
+        
 
         // Struct @ FACT.h:324:16
         //	aarch64-apple-darwin
