@@ -15,10 +15,6 @@ Automatically updated C# bindings for https://github.com/FNA-XNA/FAudio with nat
 <Import Project="$([System.IO.Path]::GetFullPath('path/to/FAudio.props'))" />
 ```
 
-#### Bindgen
-
-If you wish to re-generate the bindings, run [`c2cs`](https://github.com/lithiumtoast/c2cs) from this directory.
-
 ## Developers: Documentation
 
 For more information on how C# bindings work, see [`C2CS`](https://github.com/lithiumtoast/c2cs), the tool that generates the bindings for `FAudio` and other C libraries.
