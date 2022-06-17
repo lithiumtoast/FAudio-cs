@@ -1,3 +1,6 @@
 [submodule "ext/FAudio"]
 	path = ext/FAudio
 	url = https://github.com/FNA-XNA/FAudio
+[submodule "ext/scripts"]
+	path = ext/scripts
+	url = https://github.com/bottlenoselabs/scripts.git
