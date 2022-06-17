@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/bottlenoselabs/c2cs/main/schema.json",
+  "directory": "./ast",
+  "c": {
+    "input_file": "../src/c/bindgen/FAudio/_FAudio.h",
+    "user_include_directories": [
+      "../ext/FAudio/include"
+    ],
+    "platforms": {
+      "aarch64-pc-windows-msvc": {},
+      "x86_64-pc-windows-msvc": {}
+    }
+  }
+} 
