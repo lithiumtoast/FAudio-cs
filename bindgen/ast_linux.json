@@ -6,6 +6,7 @@
     "user_include_directories": [
       "../ext/FAudio/include"
     ],
+    "is_enabled_enums_dangling": true,
     "platforms": {
       "aarch64-unknown-linux-gnu": {},
       "x86_64-unknown-linux-gnu": {}
